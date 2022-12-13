@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec 13 15:56:52 2022
+# Process ID: 24812
+# Current directory: C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1
+# Command line: vivado.exe -log memory_manager.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_manager.tcl
+# Log file: C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/memory_manager.vds
+# Journal file: C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1\vivado.jou
+# Running On: DESKTOP-S6J8FS7, OS: Windows, CPU Frequency: 2594 MHz, CPU Physical cores: 2, Host memory: 7955 MB
+#-----------------------------------------------------------
+source memory_manager.tcl -notrace
