@@ -40,7 +40,7 @@ module test_memory(
     reg [2:0] h_shift, v_shift;
     
     
-    memory_manager(clk, start,  base_addr_frame_buffer, h_size,  v_size, base_addr_sprite_buffer,  h_shift,  v_shift, busy_in,
+    memory_manager mem (clk, start,  base_addr_frame_buffer, h_size,  v_size, base_addr_sprite_buffer,  h_shift,  v_shift, busy_in,
                        sprite_in,  sprite_address, sprite_write,
                       BRAM_PORTB_0_addr, BRAM_PORTB_0_dout);
                       
@@ -71,6 +71,8 @@ module test_memory(
             base_addr_frame_buffer<=32'b0;
             h_size=8'd1;
             v_size=8'd1;
+            h_shift<=3'd0;
+            v_shift<=3'd0;
             base_addr_sprite_buffer<=32'b0;
             start=1'b1;
             state<=state+1;
@@ -81,6 +83,7 @@ module test_memory(
         end
         else if(state==8'd5) begin
             wait (busy_in==1'b0);
+            BRAM_PORTB_0_addr<=0;
             #100;
             $finish;
             

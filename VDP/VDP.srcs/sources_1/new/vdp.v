@@ -29,9 +29,10 @@ module memory_manager(input clk, input start, input[12:0] base_addr_frame_buffer
 
   reg [12:0]BRAM_PORTA_0_addr;
   wire BRAM_PORTA_0_clk;
-  reg [511:0]BRAM_PORTA_0_din;
+  wire [511:0]BRAM_PORTA_0_din;
   reg BRAM_PORTA_0_en;
-  reg [63:0]BRAM_PORTA_0_we;
+  wire [63:0]BRAM_PORTA_0_we;
+  
   
   wire BRAM_PORTB_0_clk;
  
@@ -81,7 +82,7 @@ sprite_mem_wrapper SPRAM
 
     
     
-
+    
 
   
     reg start_d=0;
@@ -95,7 +96,7 @@ sprite_mem_wrapper SPRAM
     reg[31:0] base_addr_sprite_buffer_copy,base_addr_frame_buffer_copy,base_addr_frame_buffer_copy_to_save;
     reg last=0;
     
-    reg [511:0] partial_frame_buffer [80:0];
+    reg [511:0] partial_frame_buffer [162:0];
     reg cleaning_pfb;
     reg [7:0] h_counter_cleaning;
     
@@ -110,8 +111,12 @@ sprite_mem_wrapper SPRAM
     matrix_operations m_op( last_upper, lasti, upper, newi, h_shift, v_shift, to_save);
 
     wire[63:0] wei;
+    wire[63:0] write_activate;
+    assign write_activate={(64){busy_in & ~cleaning_pfb}};
     write_enable we1 ( newi,  wei);
     
+    reg upper_block_up;
+    integer i=0;
     
     initial begin
         busy_in=1'b0;
@@ -121,8 +126,8 @@ sprite_mem_wrapper SPRAM
         SPRITE_PORTB_0_en=1'b1;
         
         BRAM_PORTA_0_addr=13'b0;
-        BRAM_PORTA_0_din=512'b0;
-        BRAM_PORTA_0_we=64'b0;
+        
+       
         //BRAM_PORTB_0_addr=13'b0;
         
         SPRITE_PORTA_0_addr=12'b0;
@@ -130,9 +135,30 @@ sprite_mem_wrapper SPRAM
         SPRITE_PORTA_0_we=1'b0;
         SPRITE_PORTB_0_addr=12'b0;
         cleaning_pfb=1'b0;
+        upper_block_up=1'b0;
+        for(i=0;i<162;i=i+1) begin
+            partial_frame_buffer[i]=512'd0;
+        end
+        
+        h_counter_cleaning<=0;
+        last_upper<=512'd0;
+        lasti<=512'd0;
+        upper<=512'd0;
+        newi<=512'd0;
+        
+        h_counter=0;
+        v_counter=0;
+        h_size_copy=0;
+        v_size_copy=0;
+        base_addr_sprite_buffer_copy=0;
+        base_addr_frame_buffer_copy=0;
+        base_addr_frame_buffer_copy_to_save=0;
+        last=0;
+        
+        
     end
   
-  
+    integer prev_buffer_pos_counter=0;
   
     always @(posedge clk) begin
         if(posedge_start==1'b1) begin
@@ -171,11 +197,24 @@ sprite_mem_wrapper SPRAM
                 
                 BRAM_PORTA_0_addr<=base_addr_frame_buffer_copy;
                 
-                BRAM_PORTA_0_we<=wei;
-                BRAM_PORTA_0_din<=newi;
+                
+                
+                if(upper_block_up==1'b1) begin
+                    partial_frame_buffer[prev_buffer_pos_counter+81]<=newi;
+                end
+                else begin
+                    partial_frame_buffer[prev_buffer_pos_counter+1]<=newi;
+                end
+                    
                 SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
                 base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy+1;
-                
+                if(prev_buffer_pos_counter+1==h_size_copy)begin
+                    prev_buffer_pos_counter<=0;
+                    upper_block_up=~upper_block_up;
+                end
+                else begin
+                    prev_buffer_pos_counter<=prev_buffer_pos_counter+1;
+                end
                 if(h_counter+1!=h_size_copy) begin
                     h_counter=h_counter+1;
                     base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy+1;
@@ -195,7 +234,6 @@ sprite_mem_wrapper SPRAM
                     
          end
          else if(last==1'b1) begin
-            BRAM_PORTA_0_we<=64'h0;
             busy_in<=1'b0;
          end
     end
@@ -210,8 +248,29 @@ sprite_mem_wrapper SPRAM
             SPRITE_PORTA_0_din<=sprite_in;
         end
     end
-   
     
+    assign BRAM_PORTA_0_we=wei&write_activate;
+    assign BRAM_PORTA_0_din=to_save;
+    
+    always @ * begin
+        if(upper_block_up==1'b0) begin
+            newi<=SPRITE_PORTB_0_dout;
+            lasti<=partial_frame_buffer[prev_buffer_pos_counter];
+            upper<=partial_frame_buffer[prev_buffer_pos_counter+81];
+            last_upper<=partial_frame_buffer[prev_buffer_pos_counter+80];
+            
+        end
+        
+        
+        
+        else begin
+            upper<=partial_frame_buffer[prev_buffer_pos_counter+1];
+            last_upper<=partial_frame_buffer[prev_buffer_pos_counter];
+            newi<=SPRITE_PORTB_0_dout;
+            lasti<=partial_frame_buffer[prev_buffer_pos_counter+80];
+        end
+    
+    end
 
 endmodule
 
