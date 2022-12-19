@@ -228,6 +228,7 @@ sprite_mem_wrapper SPRAM
                     
                     else begin
                         if(h_shift!=0) begin
+                        
                                 if(shift_edges==2'd0||shift_edges==2'd2) begin
                                     if(shift_edges==2'd2) begin
                                         last<=1'b1;
@@ -266,15 +267,29 @@ sprite_mem_wrapper SPRAM
                                 
                         end
                         else begin
-                            if(v_counter+1!=v_size_copy) begin
+                            if(v_counter+1<v_size_copy) begin
                                 v_counter<=v_counter+1;
                                 base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+80;
                                 base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+80;
+                                h_counter<=0;
                             end
                             else begin
-                                last<=1'b1;
-                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy+1;
-
+                                if(v_shift!=0) begin
+                                    if(shift_edges==2'd0||shift_edges==2'd1)begin
+                                        shift_edges<=2'd2;
+                                        h_counter<=0;
+                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+80;
+                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+80;
+                                    end
+                                    if(shift_edges==2'd2)begin
+                                        shift_edges<=2'd0;
+                                        last<=1'b1;
+                                    end
+                                    
+                                end
+                                else begin
+                                    last<=1'b1;
+                                end
                             end
                         end
                         
@@ -333,7 +348,7 @@ sprite_mem_wrapper SPRAM
         end
     end
     
-    assign BRAM_PORTA_0_we=wei&write_activate;
+    assign BRAM_PORTA_0_we=wei&write_activate&~last;
     assign BRAM_PORTA_0_din=to_save;
     assign BRAM_PORTA_0_addr=base_addr_frame_buffer_copy;
     
