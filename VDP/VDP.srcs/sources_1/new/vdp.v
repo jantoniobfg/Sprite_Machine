@@ -348,7 +348,7 @@ sprite_mem_wrapper SPRAM
         end
     end
     
-    assign BRAM_PORTA_0_we=wei&write_activate&~last;
+    assign BRAM_PORTA_0_we=wei&write_activate&{(64){~last}};
     assign BRAM_PORTA_0_din=to_save;
     assign BRAM_PORTA_0_addr=base_addr_frame_buffer_copy;
     
@@ -371,6 +371,8 @@ sprite_mem_wrapper SPRAM
         end
     
     end
+    
+    
 
 endmodule
 
