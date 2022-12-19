@@ -10,7 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source memory_manager.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 409.516 ; gain = 81.742
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 408.930 ; gain = 101.781
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -26,23 +26,23 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 44828
+INFO: [Synth 8-7075] Helper process launched with PID 47260
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1259.332 ; gain = 407.469
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1257.520 ; gain = 408.008
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'memory_manager' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
 INFO: [Synth 8-6157] synthesizing module 'frame_buffer_wrapper' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/synth/frame_buffer.v:12]
-INFO: [Synth 8-6157] synthesizing module 'frame_buffer_blk_mem_gen_0_0' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-20604-DESKTOP-S6J8FS7/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'frame_buffer_blk_mem_gen_0_0' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-20604-DESKTOP-S6J8FS7/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer_blk_mem_gen_0_0' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-34472-DESKTOP-S6J8FS7/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer_blk_mem_gen_0_0' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-34472-DESKTOP-S6J8FS7/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/synth/frame_buffer.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'frame_buffer_wrapper' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:12]
-WARNING: [Synth 8-6104] Input port 'BRAM_PORTB_0_dout' has an internal driver [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:53]
+WARNING: [Synth 8-6104] Input port 'BRAM_PORTB_0_dout' has an internal driver [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:54]
 INFO: [Synth 8-6157] synthesizing module 'sprite_mem_wrapper' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'sprite_mem' [c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/synth/sprite_mem.v:12]
-INFO: [Synth 8-6157] synthesizing module 'sprite_mem_blk_mem_gen_0_0' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-20604-DESKTOP-S6J8FS7/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'sprite_mem_blk_mem_gen_0_0' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-20604-DESKTOP-S6J8FS7/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sprite_mem_blk_mem_gen_0_0' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-34472-DESKTOP-S6J8FS7/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_mem_blk_mem_gen_0_0' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-34472-DESKTOP-S6J8FS7/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'sprite_mem' (0#1) [c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/synth/sprite_mem.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'sprite_mem_wrapper' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'matrix_operations' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/matrix_operations.v:23]
@@ -50,7 +50,6 @@ INFO: [Synth 8-6155] done synthesizing module 'matrix_operations' (0#1) [C:/User
 INFO: [Synth 8-6157] synthesizing module 'write_enable' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/write_enable.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'write_enable' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/write_enable.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'memory_manager' (0#1) [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-3848] Net newi in module/entity memory_manager does not have driver. [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:106]
 WARNING: [Synth 8-7129] Port last_upper[455] in module matrix_operations is either unconnected or has no load
 WARNING: [Synth 8-7129] Port last_upper[454] in module matrix_operations is either unconnected or has no load
 WARNING: [Synth 8-7129] Port last_upper[453] in module matrix_operations is either unconnected or has no load
@@ -153,7 +152,7 @@ WARNING: [Synth 8-7129] Port last_upper[21] in module matrix_operations is eithe
 WARNING: [Synth 8-7129] Port last_upper[20] in module matrix_operations is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1515.922 ; gain = 664.059
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1664.105 ; gain = 814.594
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_PORTB_0_dout[511] with 1st driver pin 'VRAM/frame_buffer_i/blk_mem_gen_0/doutb[511]' [c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/synth/frame_buffer.v:52]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_PORTB_0_dout[511] with 2nd driver pin 'BRAM_PORTB_0_dout[511]' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
@@ -267,12 +266,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1515.922 ; gain = 664.059
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1664.105 ; gain = 814.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1515.922 ; gain = 664.059
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1664.105 ; gain = 814.594
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1697.383 ; gain = 1.980
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -285,48 +284,47 @@ Parsing XDC File [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/dont
 Finished Parsing XDC File [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1781.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2173.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.337 . Memory (MB): peak = 1781.598 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.852 . Memory (MB): peak = 2173.109 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Constraint Validation : Time (s): cpu = 00:01:32 ; elapsed = 00:01:32 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:32 ; elapsed = 00:01:32 . Memory (MB): peak = 2173.109 ; gain = 1323.598
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:03 ; elapsed = 00:02:13 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 6     
+	   2 Input   32 Bit       Adders := 5     
 	   2 Input    9 Bit       Adders := 4     
-	   2 Input    8 Bit       Adders := 2     
-	   2 Input    7 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	              512 Bit    Registers := 83    
-	               64 Bit    Registers := 1     
+	              512 Bit    Registers := 164   
 	               32 Bit    Registers := 2     
-	               13 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
 	                8 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input  512 Bit        Muxes := 408   
-	   2 Input   64 Bit        Muxes := 1     
+	   2 Input  512 Bit        Muxes := 818   
 	   2 Input   32 Bit        Muxes := 5     
-	   2 Input   12 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 264   
-	   3 Input    1 Bit        Muxes := 81    
+	   2 Input    1 Bit        Muxes := 523   
+	   3 Input    1 Bit        Muxes := 164   
 	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -344,35 +342,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[7]' (FDRE) to 'v_counter_reg[6]'
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[6]' (FDRE) to 'v_counter_reg[5]'
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[4]' (FDRE) to 'v_counter_reg[5]'
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[3]' (FDRE) to 'v_counter_reg[5]'
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[5]' (FDRE) to 'v_counter_reg[2]'
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[1]' (FDRE) to 'v_counter_reg[2]'
-INFO: [Synth 8-3886] merging instance 'v_counter_reg[0]' (FDRE) to 'v_counter_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\v_counter_reg[2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:03:01 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:34 ; elapsed = 00:06:50 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:51 ; elapsed = 00:03:39 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:00 ; elapsed = 00:07:20 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:52 ; elapsed = 00:03:41 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Timing Optimization : Time (s): cpu = 00:06:26 ; elapsed = 00:07:46 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:53 ; elapsed = 00:03:42 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Technology Mapping : Time (s): cpu = 00:07:47 ; elapsed = 00:09:28 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -390,37 +379,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished IO Insertion : Time (s): cpu = 00:08:35 ; elapsed = 00:10:20 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:08:36 ; elapsed = 00:10:21 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:45 ; elapsed = 00:10:30 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Renaming Generated Ports : Time (s): cpu = 00:08:46 ; elapsed = 00:10:31 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:49 ; elapsed = 00:10:34 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:50 ; elapsed = 00:10:35 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -441,40 +430,21 @@ Report Cell Usage:
 |1     |frame_buffer_blk_mem_gen_0 |     1|
 |2     |sprite_mem_blk_mem_gen_0   |     1|
 |3     |BUFG                       |     1|
-|4     |CARRY4                     |    18|
-|5     |LUT1                       |     4|
-|6     |LUT2                       |     7|
-|7     |LUT3                       |    48|
-|8     |LUT4                       |     6|
-|9     |LUT5                       |    18|
-|10    |LUT6                       |    14|
-|11    |FDRE                       |   625|
-|12    |IBUF                       |   587|
-|13    |OBUF                       |     1|
+|4     |CARRY4                     |    43|
+|5     |LUT1                       |    11|
+|6     |LUT2                       |   108|
+|7     |LUT3                       |  2684|
+|8     |LUT4                       |   425|
+|9     |LUT5                       |  2177|
+|10    |LUT6                       | 76522|
+|11    |MUXF7                      | 34295|
+|12    |MUXF8                      | 16940|
+|13    |FDRE                       | 74840|
+|14    |FDSE                       |     2|
+|15    |IBUF                       |   587|
+|16    |OBUF                       |     1|
 +------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:03 ; elapsed = 00:03:54 . Memory (MB): peak = 1781.598 ; gain = 929.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:50 ; elapsed = 00:10:35 . Memory (MB): peak = 2173.109 ; gain = 1323.598
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:24 ; elapsed = 00:03:41 . Memory (MB): peak = 1781.598 ; gain = 664.059
-Synthesis Optimization Complete : Time (s): cpu = 00:03:03 ; elapsed = 00:04:04 . Memory (MB): peak = 1781.598 ; gain = 929.734
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 1781.598 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'memory_manager' is not ideal for floorplanning, since the cellview 'memory_manager' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1781.598 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Synth Design complete, checksum: 97c7e987
-INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 104 Warnings, 100 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:13 ; elapsed = 00:04:22 . Memory (MB): peak = 1781.598 ; gain = 1333.211
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1/memory_manager.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file memory_manager_utilization_synth.rpt -pb memory_manager_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 13 17:39:08 2022...
+Synthesis finished with 0 errors, 0 critical warnings and 100 warnings.
