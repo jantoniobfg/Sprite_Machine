@@ -26,17 +26,17 @@ module test_memory(
     
     reg clk=0;
     reg start=0;
-    reg[12:0] base_addr_frame_buffer;
+    reg[14:0] base_addr_frame_buffer;
     reg[7:0] h_size;
     reg[7:0] v_size;
-    reg[11:0] base_addr_sprite_buffer;
+    reg[13:0] base_addr_sprite_buffer;
     wire busy_in;
     
-    reg[511:0] sprite_in;
-    reg[11:0] sprite_address;
+    reg[513:0] sprite_in;
+    reg[13:0] sprite_address;
     reg sprite_write;
-    reg [12:0]BRAM_PORTB_0_addr;
-    wire [511:0] BRAM_PORTB_0_dout;
+    reg [14:0]BRAM_PORTB_0_addr;
+    wire [513:0] BRAM_PORTB_0_dout;
     reg [2:0] h_shift, v_shift;
     reg [7:0] state=0;
     
@@ -65,38 +65,38 @@ module test_memory(
     
     always@ (posedge clk) begin
         if(state==8'd0) begin
-            sprite_in<=512'b0;
-            sprite_address<=12'b0;
+            sprite_in<=128'b0;
+            sprite_address<=14'b0;
             sprite_write<=1'b1;
             state<=state+1;
         end
         else if(state==8'd1) begin
-            sprite_in<=512'b0;
-            sprite_address<=12'b0;
+            sprite_in<=128'b0;
+            sprite_address<=14'b0;
             sprite_write<=1'b1;
             state<=state+1;
         end
         else if(state==8'd2) begin
-            sprite_in<=512'hFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF;
-            sprite_address<=12'b0;
+            sprite_in<=128'hFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF;
+            sprite_address<=14'b0;
             sprite_write<=1'b1;
             state<=state+1;
         end
         else if(state==8'd3) begin
-            sprite_in<=512'hFFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000;
-            sprite_address<=12'd1;
+            sprite_in<=128'hFFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000;
+            sprite_address<=14'd1;
             sprite_write<=1'b1;
             state<=state+1;
         end
         else if(state==8'd4) begin
-            sprite_in<=512'h0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF;
-            sprite_address<=12'd2;
+            sprite_in<=128'h0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF;
+            sprite_address<=14'd2;
             sprite_write<=1'b1;
             state<=state+1;
         end
         else if(state==8'd5) begin
-            sprite_in<=512'hFFFFFFFFFFFFFFFF_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_FFFFFFFFFFFFFFFF;
-            sprite_address<=12'd3;
+            sprite_in<=128'hFFFFFFFFFFFFFFFF_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_FFFFFFFFFFFFFFFF;
+            sprite_address<=14'd3;
             sprite_write<=1'b1;
             state<=state+1;
         end
@@ -137,7 +137,7 @@ module test_memory(
         end
         else if(state==8'd11) begin
             
-            BRAM_PORTB_0_addr<=80;
+            BRAM_PORTB_0_addr<=160;
             state<=state+1;
             
             

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Fri Dec  9 16:04:07 2022
-| Host         : DESKTOP-S6J8FS7 running 64-bit major release  (build 9200)
+| Date         : Tue Dec 20 14:59:29 2022
+| Host         : DELL-DIR running 64-bit major release  (build 9200)
 | Command      : report_utilization -file sprite_mem_blk_mem_gen_0_0_utilization_synth.rpt -pb sprite_mem_blk_mem_gen_0_0_utilization_synth.pb
 | Design       : sprite_mem_blk_mem_gen_0_0
 | Device       : xc7z020clg400-1
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  507 |     0 |          0 |     53200 |  0.95 |
-|   LUT as Logic          |  507 |     0 |          0 |     53200 |  0.95 |
+| Slice LUTs*             |  132 |     0 |          0 |     53200 |  0.25 |
+|   LUT as Logic          |  132 |     0 |          0 |     53200 |  0.25 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
 | Slice Registers         |    4 |     0 |          0 |    106400 | <0.01 |
 |   Register as Flip Flop |    4 |     0 |          0 |    106400 | <0.01 |
@@ -149,11 +149,10 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT4     |  503 |                 LUT |
+| LUT5     |  126 |                 LUT |
 | RAMB36E1 |   43 |        Block Memory |
+| LUT3     |    6 |                 LUT |
 | FDRE     |    4 |        Flop & Latch |
-| LUT3     |    2 |                 LUT |
-| LUT2     |    2 |                 LUT |
 +----------+------+---------------------+
 
 

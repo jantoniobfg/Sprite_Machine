@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Fri Dec  9 16:00:45 2022
-//Host        : DESKTOP-S6J8FS7 running 64-bit major release  (build 9200)
+//Date        : Tue Dec 20 14:57:39 2022
+//Host        : DELL-DIR running 64-bit major release  (build 9200)
 //Command     : generate_target sprite_mem.bd
 //Design      : sprite_mem
 //Purpose     : IP block netlist
@@ -20,35 +20,35 @@ module sprite_mem
     SPRITE_PORTB_0_clk,
     SPRITE_PORTB_0_dout,
     SPRITE_PORTB_0_en);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [11:0]SPRITE_PORTA_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 " *) input SPRITE_PORTA_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 " *) input [511:0]SPRITE_PORTA_0_din;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 " *) input SPRITE_PORTA_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 " *) input [0:0]SPRITE_PORTA_0_we;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [11:0]SPRITE_PORTB_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 " *) input SPRITE_PORTB_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 " *) output [511:0]SPRITE_PORTB_0_dout;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 " *) input SPRITE_PORTB_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [13:0]SPRITE_PORTA_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 CLK" *) input SPRITE_PORTA_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 DIN" *) input [127:0]SPRITE_PORTA_0_din;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 EN" *) input SPRITE_PORTA_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTA_0 WE" *) input [0:0]SPRITE_PORTA_0_we;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [13:0]SPRITE_PORTB_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 CLK" *) input SPRITE_PORTB_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 DOUT" *) output [127:0]SPRITE_PORTB_0_dout;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_PORTB_0 EN" *) input SPRITE_PORTB_0_en;
 
-  wire [11:0]BRAM_PORTA_0_1_ADDR;
+  wire [13:0]BRAM_PORTA_0_1_ADDR;
   wire BRAM_PORTA_0_1_CLK;
-  wire [511:0]BRAM_PORTA_0_1_DIN;
+  wire [127:0]BRAM_PORTA_0_1_DIN;
   wire BRAM_PORTA_0_1_EN;
   wire [0:0]BRAM_PORTA_0_1_WE;
-  wire [11:0]BRAM_PORTB_0_1_ADDR;
+  wire [13:0]BRAM_PORTB_0_1_ADDR;
   wire BRAM_PORTB_0_1_CLK;
-  wire [511:0]BRAM_PORTB_0_1_DOUT;
+  wire [127:0]BRAM_PORTB_0_1_DOUT;
   wire BRAM_PORTB_0_1_EN;
 
-  assign BRAM_PORTA_0_1_ADDR = SPRITE_PORTA_0_addr[11:0];
+  assign BRAM_PORTA_0_1_ADDR = SPRITE_PORTA_0_addr[13:0];
   assign BRAM_PORTA_0_1_CLK = SPRITE_PORTA_0_clk;
-  assign BRAM_PORTA_0_1_DIN = SPRITE_PORTA_0_din[511:0];
+  assign BRAM_PORTA_0_1_DIN = SPRITE_PORTA_0_din[127:0];
   assign BRAM_PORTA_0_1_EN = SPRITE_PORTA_0_en;
   assign BRAM_PORTA_0_1_WE = SPRITE_PORTA_0_we[0];
-  assign BRAM_PORTB_0_1_ADDR = SPRITE_PORTB_0_addr[11:0];
+  assign BRAM_PORTB_0_1_ADDR = SPRITE_PORTB_0_addr[13:0];
   assign BRAM_PORTB_0_1_CLK = SPRITE_PORTB_0_clk;
   assign BRAM_PORTB_0_1_EN = SPRITE_PORTB_0_en;
-  assign SPRITE_PORTB_0_dout[511:0] = BRAM_PORTB_0_1_DOUT;
+  assign SPRITE_PORTB_0_dout[127:0] = BRAM_PORTB_0_1_DOUT;
   sprite_mem_blk_mem_gen_0_0 sprite_mem
        (.addra(BRAM_PORTA_0_1_ADDR),
         .addrb(BRAM_PORTB_0_1_ADDR),

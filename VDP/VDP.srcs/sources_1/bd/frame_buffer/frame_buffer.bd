@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9BEE4B517018818A",
+      "boundary_crc": "0x6D05B5B0A7F02B28",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../VDP.gen/sources_1/bd/frame_buffer",
       "name": "frame_buffer",
@@ -47,7 +47,7 @@
           "ADDR": {
             "physical_name": "BRAM_PORTA_0_addr",
             "direction": "I",
-            "left": "12",
+            "left": "14",
             "right": "0"
           },
           "CLK": {
@@ -57,7 +57,7 @@
           "DIN": {
             "physical_name": "BRAM_PORTA_0_din",
             "direction": "I",
-            "left": "511",
+            "left": "127",
             "right": "0"
           },
           "EN": {
@@ -67,7 +67,7 @@
           "WE": {
             "physical_name": "BRAM_PORTA_0_we",
             "direction": "I",
-            "left": "63",
+            "left": "15",
             "right": "0"
           }
         }
@@ -105,7 +105,7 @@
           "ADDR": {
             "physical_name": "BRAM_PORTB_0_addr",
             "direction": "I",
-            "left": "12",
+            "left": "14",
             "right": "0"
           },
           "CLK": {
@@ -115,7 +115,7 @@
           "DOUT": {
             "physical_name": "BRAM_PORTB_0_dout",
             "direction": "O",
-            "left": "511",
+            "left": "127",
             "right": "0"
           },
           "EN": {
@@ -154,13 +154,13 @@
             "value": "true"
           },
           "Write_Depth_A": {
-            "value": "4800"
+            "value": "19200"
           },
           "Write_Width_A": {
-            "value": "512"
+            "value": "128"
           },
           "Write_Width_B": {
-            "value": "512"
+            "value": "128"
           },
           "use_bram_block": {
             "value": "Stand_Alone"

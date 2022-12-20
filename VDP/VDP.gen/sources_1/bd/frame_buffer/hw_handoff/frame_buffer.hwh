@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec  9 16:00:48 2022" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 20 14:57:40 2022" VIVADOVERSION="2022.2">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="frame_buffer" PACKAGE="clg400" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="frame_buffer" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" LEFT="12" NAME="BRAM_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addra">
+    <PORT DIR="I" LEFT="14" NAME="BRAM_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addra">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="BRAM_PORTA_0_clk" SIGIS="clk" SIGNAME="blk_mem_gen_0_clka">
+    <PORT DIR="I" NAME="BRAM_PORTA_0_clk" SIGIS="undef" SIGNAME="blk_mem_gen_0_clka">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="511" NAME="BRAM_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_dina">
+    <PORT DIR="I" LEFT="127" NAME="BRAM_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_dina">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
       </CONNECTIONS>
@@ -24,22 +24,22 @@
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="63" NAME="BRAM_PORTA_0_we" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_wea">
+    <PORT DIR="I" LEFT="15" NAME="BRAM_PORTA_0_we" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_wea">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="wea"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="12" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addrb">
+    <PORT DIR="I" LEFT="14" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addrb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addrb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="clk" SIGNAME="blk_mem_gen_0_clkb">
+    <PORT DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="undef" SIGNAME="blk_mem_gen_0_clkb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="511" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+    <PORT DIR="O" LEFT="127" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="doutb"/>
       </CONNECTIONS>
@@ -116,13 +116,13 @@
         <PARAMETER NAME="C_HAS_ENA" VALUE="1"/>
         <PARAMETER NAME="C_HAS_REGCEA" VALUE="0"/>
         <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="1"/>
-        <PARAMETER NAME="C_WEA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_WEA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="NO_CHANGE"/>
-        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="512"/>
-        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="512"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="4800"/>
-        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="4800"/>
-        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="128"/>
+        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="128"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="19200"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="19200"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="15"/>
         <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
         <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
@@ -130,13 +130,13 @@
         <PARAMETER NAME="C_HAS_ENB" VALUE="1"/>
         <PARAMETER NAME="C_HAS_REGCEB" VALUE="0"/>
         <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="1"/>
-        <PARAMETER NAME="C_WEB_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_WEB_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
-        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="512"/>
-        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="512"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="4800"/>
-        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="4800"/>
-        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="128"/>
+        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="128"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="19200"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="19200"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="15"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="1"/>
         <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
@@ -161,9 +161,9 @@
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="80"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="76"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     261.447072 mW"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     67.204912 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="frame_buffer_blk_mem_gen_0_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -189,13 +189,13 @@
         <PARAMETER NAME="Algorithm" VALUE="Minimum_Area"/>
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
-        <PARAMETER NAME="Write_Width_A" VALUE="512"/>
-        <PARAMETER NAME="Write_Depth_A" VALUE="4800"/>
-        <PARAMETER NAME="Read_Width_A" VALUE="512"/>
+        <PARAMETER NAME="Write_Width_A" VALUE="128"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="19200"/>
+        <PARAMETER NAME="Read_Width_A" VALUE="128"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="NO_CHANGE"/>
         <PARAMETER NAME="Enable_A" VALUE="Use_ENA_Pin"/>
-        <PARAMETER NAME="Write_Width_B" VALUE="512"/>
-        <PARAMETER NAME="Read_Width_B" VALUE="512"/>
+        <PARAMETER NAME="Write_Width_B" VALUE="128"/>
+        <PARAMETER NAME="Read_Width_B" VALUE="128"/>
         <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_B" VALUE="Use_ENB_Pin"/>
         <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="false"/>
@@ -249,17 +249,17 @@
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTA_0_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_wea">
+        <PORT DIR="I" LEFT="15" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_wea">
           <CONNECTIONS>
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTA_0_we"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="12" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addra">
+        <PORT DIR="I" LEFT="14" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addra">
           <CONNECTIONS>
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTA_0_addr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="511" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_dina">
+        <PORT DIR="I" LEFT="127" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_dina">
           <CONNECTIONS>
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTA_0_din"/>
           </CONNECTIONS>
@@ -274,12 +274,12 @@
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTB_0_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="12" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addrb">
+        <PORT DIR="I" LEFT="14" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTB_0_addr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="511" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+        <PORT DIR="O" LEFT="127" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="frame_buffer_imp" PORT="BRAM_PORTB_0_dout"/>
           </CONNECTIONS>

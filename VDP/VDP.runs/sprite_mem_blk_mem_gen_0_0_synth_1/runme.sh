@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/PC/Documents/FPGA/final_proj/VDP/VDP.runs/sprite_mem_blk_mem_gen_0_0_synth_1'
+HD_PWD='C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/sprite_mem_blk_mem_gen_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

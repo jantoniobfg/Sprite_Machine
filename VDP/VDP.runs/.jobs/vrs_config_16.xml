@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="frame_buffer_blk_mem_gen_0_0_synth_1" LaunchDir="C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/frame_buffer_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sprite_mem_blk_mem_gen_0_0_synth_1" LaunchDir="C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/sprite_mem_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="frame_buffer_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="sprite_mem_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -13,6 +13,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==frame_buffe
 # IP: bd/frame_buffer/ip/frame_buffer_blk_mem_gen_0_0/frame_buffer_blk_mem_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==frame_buffer_blk_mem_gen_0_0 || ORIG_REF_NAME==frame_buffer_blk_mem_gen_0_0} -quiet] -quiet
 
-# XDC: c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/sprite_mem_ooc.xdc
+# XDC: c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/sprite_mem_ooc.xdc
 
-# XDC: c:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/frame_buffer_ooc.xdc
+# XDC: c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/frame_buffer_ooc.xdc

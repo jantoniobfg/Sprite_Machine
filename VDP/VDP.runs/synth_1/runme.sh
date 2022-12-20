@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.runs/synth_1'
+HD_PWD='C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -20,16 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module memory_manager(input clk, input start, input[12:0] base_addr_frame_buffer, input[7:0] h_size, input[7:0] v_size, input[11:0] base_addr_sprite_buffer, input[2:0] h_shift, input[2:0] v_shift, output reg busy_in,
-                      input[511:0] sprite_in, input[11:0] sprite_address, input sprite_write,
-                      input [12:0]BRAM_PORTB_0_addr, wire [511:0]BRAM_PORTB_0_dout);
+module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer, input[7:0] h_size, input[7:0] v_size, input[13:0] base_addr_sprite_buffer, input[2:0] h_shift, input[2:0] v_shift, output reg busy_in,
+                      input[127:0] sprite_in, input[13:0] sprite_address, input sprite_write,
+                      input [14:0]BRAM_PORTB_0_addr, wire [127:0]BRAM_PORTB_0_dout);
 
   
     
 
-  wire [12:0]BRAM_PORTA_0_addr;
+  wire [14:0]BRAM_PORTA_0_addr;
   wire BRAM_PORTA_0_clk;
-  wire [511:0]BRAM_PORTA_0_din;
+  wire [513:0]BRAM_PORTA_0_din;
   reg BRAM_PORTA_0_en;
   wire [63:0]BRAM_PORTA_0_we;
   
@@ -56,14 +56,14 @@ frame_buffer_wrapper VRAM
 
     
 
-  reg [11:0]SPRITE_PORTA_0_addr;
+  reg [13:0]SPRITE_PORTA_0_addr;
   wire SPRITE_PORTA_0_clk;
-  reg [511:0]SPRITE_PORTA_0_din;
+  reg [127:0]SPRITE_PORTA_0_din;
   reg SPRITE_PORTA_0_en;
   reg [0:0]SPRITE_PORTA_0_we;
-  reg [11:0]SPRITE_PORTB_0_addr;
+  reg [13:0]SPRITE_PORTB_0_addr;
   wire SPRITE_PORTB_0_clk;
-  wire [511:0]SPRITE_PORTB_0_dout;
+  wire [127:0]SPRITE_PORTB_0_dout;
   reg SPRITE_PORTB_0_en;
   
   assign SPRITE_PORTA_0_clk=clk;
@@ -93,25 +93,25 @@ sprite_mem_wrapper SPRAM
     end
     
     reg[7:0] h_counter,v_counter,h_size_copy,v_size_copy;
-    reg[11:0] base_addr_sprite_buffer_copy;
-    reg[12:0] base_addr_frame_buffer_copy,base_addr_frame_buffer_copy_to_save;
+    reg[13:0] base_addr_sprite_buffer_copy;
+    reg[14:0] base_addr_frame_buffer_copy,base_addr_frame_buffer_copy_to_save;
     reg last=0;
     
-    reg [511:0] partial_frame_buffer [162:0];
+    reg [127:0] partial_frame_buffer [322:0];
     reg cleaning_pfb;
     reg [7:0] h_counter_cleaning;
     
     
-    reg [511:0] last_upper;
-    reg [511:0] lasti;
-    reg [511:0] upper;
-    reg [511:0] newi;
-    wire [511:0] to_save;
+    reg [127:0] last_upper;
+    reg [127:0] lasti;
+    reg [127:0] upper;
+    reg [127:0] newi;
+    wire [127:0] to_save;
     matrix_operations m_op( last_upper, lasti, upper, newi, h_shift, v_shift, to_save);
 
-    wire[63:0] wei;
-    wire[63:0] write_activate;
-    assign write_activate={(64){busy_in & ~cleaning_pfb}};
+    wire[15:0] wei;
+    wire[15:0] write_activate;
+    assign write_activate={(16){busy_in & ~cleaning_pfb}};
     write_enable we1 ( to_save,  wei);
     
     reg upper_block_up;
@@ -132,21 +132,21 @@ sprite_mem_wrapper SPRAM
        
         //BRAM_PORTB_0_addr=13'b0;
         
-        SPRITE_PORTA_0_addr=12'b0;
-        SPRITE_PORTA_0_din=512'b0;
+        SPRITE_PORTA_0_addr=14'b0;
+        SPRITE_PORTA_0_din=128'b0;
         SPRITE_PORTA_0_we=1'b0;
-        SPRITE_PORTB_0_addr=12'b0;
+        SPRITE_PORTB_0_addr=14'b0;
         cleaning_pfb=1'b0;
         upper_block_up=1'b0;
         for(i=0;i<162;i=i+1) begin
-            partial_frame_buffer[i]<=512'd0;
+            partial_frame_buffer[i]<=128'd0;
         end
         
         h_counter_cleaning=0;
-        last_upper=512'd0;
-        lasti=512'd0;
-        upper=512'd0;
-        newi=512'd0;
+        last_upper=128'd0;
+        lasti=128'd0;
+        upper=128'd0;
+        newi=128'd0;
         
         h_counter=0;
         v_counter=0;
@@ -176,8 +176,8 @@ sprite_mem_wrapper SPRAM
             v_size_copy<=v_size;
             
             if(v_shift>0||h_shift>0) begin
-                partial_frame_buffer[0]<=512'b0;
-                partial_frame_buffer[80]<=512'b0;
+                partial_frame_buffer[0]<=128'b0;
+                partial_frame_buffer[160]<=128'b0;
                 cleaning_pfb<=1'b1;
                 h_counter_cleaning<=1;
                            
@@ -201,8 +201,8 @@ sprite_mem_wrapper SPRAM
         
         else if(busy_in==1'b1 && last==1'b0) begin
             if(cleaning_pfb==1'b1) begin
-                partial_frame_buffer[h_counter_cleaning]<=512'b0;
-                partial_frame_buffer[h_counter_cleaning+80]<=512'b0;
+                partial_frame_buffer[h_counter_cleaning]<=128'b0;
+                partial_frame_buffer[h_counter_cleaning+160]<=128'b0;
                 if(h_counter_cleaning+1>=h_size_copy) begin
                     cleaning_pfb<=1'b0;
                     wait_for_mem<=2'd2;
@@ -244,8 +244,8 @@ sprite_mem_wrapper SPRAM
                                     if(v_counter+1<v_size_copy) begin
                                         v_counter<=v_counter+1;
                                         h_counter<=0;
-                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+80;
-                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+80;
+                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
                                         if(shift_edges==2'd1) begin
                                             shift_edges<=2'd0;
                                             wait_for_mem<=2'd3;//////ATENÇÃO VERIFICAR FUNCIONAMENTO
@@ -257,8 +257,8 @@ sprite_mem_wrapper SPRAM
                                             if(shift_edges==2'd0||shift_edges==2'd1)begin
                                                 shift_edges<=2'd2;
                                                 h_counter<=0;
-                                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+80;
-                                                base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+80;
+                                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                                base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
                                             end
                                         end
                                         last<=1'b1;
@@ -269,8 +269,8 @@ sprite_mem_wrapper SPRAM
                         else begin
                             if(v_counter+1<v_size_copy) begin
                                 v_counter<=v_counter+1;
-                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+80;
-                                base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+80;
+                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
                                 h_counter<=0;
                             end
                             else begin
@@ -278,8 +278,8 @@ sprite_mem_wrapper SPRAM
                                     if(shift_edges==2'd0||shift_edges==2'd1)begin
                                         shift_edges<=2'd2;
                                         h_counter<=0;
-                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+80;
-                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+80;
+                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
                                     end
                                     if(shift_edges==2'd2)begin
                                         shift_edges<=2'd0;
@@ -348,16 +348,16 @@ sprite_mem_wrapper SPRAM
         end
     end
     
-    assign BRAM_PORTA_0_we=wei&write_activate&{(64){~last}};
+    assign BRAM_PORTA_0_we=wei&write_activate&{(16){~last}};
     assign BRAM_PORTA_0_din=to_save;
     assign BRAM_PORTA_0_addr=base_addr_frame_buffer_copy;
     
     always @ * begin
         if(upper_block_up==1'b0) begin
-            newi<=SPRITE_PORTB_0_dout & {(512){shift_edges==2'd0}};
+            newi<=SPRITE_PORTB_0_dout & {(128){shift_edges==2'd0}};
             lasti<=partial_frame_buffer[prev_buffer_pos_counter];
-            upper<=partial_frame_buffer[prev_buffer_pos_counter+81];
-            last_upper<=partial_frame_buffer[prev_buffer_pos_counter+80];
+            upper<=partial_frame_buffer[prev_buffer_pos_counter+161];
+            last_upper<=partial_frame_buffer[prev_buffer_pos_counter+160];
             
         end
         
@@ -366,8 +366,8 @@ sprite_mem_wrapper SPRAM
         else begin
             upper<=partial_frame_buffer[prev_buffer_pos_counter+1];
             last_upper<=partial_frame_buffer[prev_buffer_pos_counter];
-            newi<=SPRITE_PORTB_0_dout &  {(512){shift_edges==2'd0}};
-            lasti<=partial_frame_buffer[prev_buffer_pos_counter+80];
+            newi<=SPRITE_PORTB_0_dout &  {(128){shift_edges==2'd0}};
+            lasti<=partial_frame_buffer[prev_buffer_pos_counter+160];
         end
     
     end

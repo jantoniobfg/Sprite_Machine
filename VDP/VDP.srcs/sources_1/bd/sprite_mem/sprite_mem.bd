@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA7839F2F399CED96",
+      "boundary_crc": "0x9596F10A385EE506",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../VDP.gen/sources_1/bd/sprite_mem",
       "name": "sprite_mem",
@@ -44,7 +44,7 @@
           "ADDR": {
             "physical_name": "SPRITE_PORTA_0_addr",
             "direction": "I",
-            "left": "11",
+            "left": "13",
             "right": "0"
           },
           "CLK": {
@@ -54,7 +54,7 @@
           "DIN": {
             "physical_name": "SPRITE_PORTA_0_din",
             "direction": "I",
-            "left": "511",
+            "left": "127",
             "right": "0"
           },
           "EN": {
@@ -99,7 +99,7 @@
           "ADDR": {
             "physical_name": "SPRITE_PORTB_0_addr",
             "direction": "I",
-            "left": "11",
+            "left": "13",
             "right": "0"
           },
           "CLK": {
@@ -109,7 +109,7 @@
           "DOUT": {
             "physical_name": "SPRITE_PORTB_0_dout",
             "direction": "O",
-            "left": "511",
+            "left": "127",
             "right": "0"
           },
           "EN": {
@@ -130,10 +130,10 @@
             "value": "Simple_Dual_Port_RAM"
           },
           "Write_Depth_A": {
-            "value": "3000"
+            "value": "12288"
           },
           "Write_Width_A": {
-            "value": "512"
+            "value": "128"
           },
           "use_bram_block": {
             "value": "Stand_Alone"

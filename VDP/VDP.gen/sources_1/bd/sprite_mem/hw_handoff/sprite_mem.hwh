@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec  9 16:00:47 2022" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 20 14:57:40 2022" VIVADOVERSION="2022.2">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="sprite_mem" PACKAGE="clg400" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="sprite_mem" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" LEFT="11" NAME="SPRITE_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
+    <PORT DIR="I" LEFT="13" NAME="SPRITE_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="addra"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="SPRITE_PORTA_0_clk" SIGIS="clk" SIGNAME="sprite_mem_clka">
+    <PORT DIR="I" NAME="SPRITE_PORTA_0_clk" SIGIS="undef" SIGNAME="sprite_mem_clka">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="clka"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="511" NAME="SPRITE_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
+    <PORT DIR="I" LEFT="127" NAME="SPRITE_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="dina"/>
       </CONNECTIONS>
@@ -29,17 +29,17 @@
         <CONNECTION INSTANCE="sprite_mem" PORT="wea"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="11" NAME="SPRITE_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
+    <PORT DIR="I" LEFT="13" NAME="SPRITE_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="addrb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="SPRITE_PORTB_0_clk" SIGIS="clk" SIGNAME="sprite_mem_clkb">
+    <PORT DIR="I" NAME="SPRITE_PORTB_0_clk" SIGIS="undef" SIGNAME="sprite_mem_clkb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="clkb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="511" NAME="SPRITE_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
+    <PORT DIR="O" LEFT="127" NAME="SPRITE_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="doutb"/>
       </CONNECTIONS>
@@ -118,11 +118,11 @@
         <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="0"/>
         <PARAMETER NAME="C_WEA_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="NO_CHANGE"/>
-        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="512"/>
-        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="512"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="3000"/>
-        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="3000"/>
-        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="128"/>
+        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="128"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="12288"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="12288"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
         <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
@@ -132,11 +132,11 @@
         <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="0"/>
         <PARAMETER NAME="C_WEB_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
-        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="512"/>
-        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="512"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="3000"/>
-        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="3000"/>
-        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="128"/>
+        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="128"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="12288"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="12288"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="1"/>
         <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
@@ -163,7 +163,7 @@
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
         <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="43"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     121.373424 mW"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     68.603352 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="sprite_mem_blk_mem_gen_0_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -189,13 +189,13 @@
         <PARAMETER NAME="Algorithm" VALUE="Minimum_Area"/>
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
-        <PARAMETER NAME="Write_Width_A" VALUE="512"/>
-        <PARAMETER NAME="Write_Depth_A" VALUE="3000"/>
-        <PARAMETER NAME="Read_Width_A" VALUE="512"/>
+        <PARAMETER NAME="Write_Width_A" VALUE="128"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="12288"/>
+        <PARAMETER NAME="Read_Width_A" VALUE="128"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="NO_CHANGE"/>
         <PARAMETER NAME="Enable_A" VALUE="Use_ENA_Pin"/>
-        <PARAMETER NAME="Write_Width_B" VALUE="512"/>
-        <PARAMETER NAME="Read_Width_B" VALUE="512"/>
+        <PARAMETER NAME="Write_Width_B" VALUE="128"/>
+        <PARAMETER NAME="Read_Width_B" VALUE="128"/>
         <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_B" VALUE="Use_ENB_Pin"/>
         <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="false"/>
@@ -254,12 +254,12 @@
             <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_we"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
+        <PORT DIR="I" LEFT="13" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_addr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="511" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
+        <PORT DIR="I" LEFT="127" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_din"/>
           </CONNECTIONS>
@@ -274,12 +274,12 @@
             <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
+        <PORT DIR="I" LEFT="13" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_addr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="511" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
+        <PORT DIR="O" LEFT="127" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_dout"/>
           </CONNECTIONS>
