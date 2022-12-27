@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1671552125" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vdp.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1671625332" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vdp.dcp">
   <File Type="PA-TCL" Name="memory_manager.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="memory_manager_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="memory_manager_reports.tcl"/>
@@ -19,6 +19,20 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/frame_buffer/frame_buffer.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/buffer_rams/buffer_rams.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -87,8 +101,14 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="sprite_mem_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="frame_buffer_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="buffer_rams_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="buffer_rams_blk_mem_gen_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="buffer_rams_blk_mem_gen_0_3"/>
 </GenRun>

@@ -1,0 +1,433 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF3C618415F87019F",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../VDP.gen/sources_1/bd/buffer_rams",
+      "name": "buffer_rams",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "UPPER_PREVIOUS": "",
+      "PREVIOUS": "",
+      "UPPER": ""
+    },
+    "interface_ports": {
+      "UPPER_PREVIOUS_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_PREVIOUS_PORTA_0_addr",
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_PREVIOUS_PORTA_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "UPPER_PREVIOUS_PORTA_0_din",
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_PREVIOUS_PORTA_0_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "UPPER_PREVIOUS_PORTA_0_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "UPPER_PREVIOUS_PORTB_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_PREVIOUS_PORTB_0_addr",
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_PREVIOUS_PORTB_0_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "UPPER_PREVIOUS_PORTB_0_dout",
+            "direction": "O",
+            "left": "127",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_PREVIOUS_PORTB_0_en",
+            "direction": "I"
+          }
+        }
+      },
+      "PREVIOUS_PORTA_1": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "PREVIOUS_PORTA_1_addr",
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "PREVIOUS_PORTA_1_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "PREVIOUS_PORTA_1_din",
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "PREVIOUS_PORTA_1_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "PREVIOUS_PORTA_1_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "PREVIOUS_PORTB_1": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "PREVIOUS_PORTB_1_addr",
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "PREVIOUS_PORTB_1_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "PREVIOUS_PORTB_1_dout",
+            "direction": "O",
+            "left": "127",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "PREVIOUS_PORTB_1_en",
+            "direction": "I"
+          }
+        }
+      },
+      "UPPER_PORTA_2": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_PORTA_2_addr",
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_PORTA_2_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "UPPER_PORTA_2_din",
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_PORTA_2_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "UPPER_PORTA_2_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "UPPER_PORTB_2": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_PORTB_2_addr",
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_PORTB_2_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "UPPER_PORTB_2_dout",
+            "direction": "O",
+            "left": "127",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_PORTB_2_en",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "components": {
+      "UPPER_PREVIOUS": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "buffer_rams_blk_mem_gen_0_0",
+        "xci_path": "ip\\buffer_rams_blk_mem_gen_0_0\\buffer_rams_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "UPPER_PREVIOUS",
+        "parameters": {
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "330"
+          },
+          "Write_Width_A": {
+            "value": "128"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "PREVIOUS": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "buffer_rams_blk_mem_gen_0_1",
+        "xci_path": "ip\\buffer_rams_blk_mem_gen_0_1\\buffer_rams_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "PREVIOUS",
+        "parameters": {
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "330"
+          },
+          "Write_Width_A": {
+            "value": "128"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "UPPER": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "buffer_rams_blk_mem_gen_0_3",
+        "xci_path": "ip\\buffer_rams_blk_mem_gen_0_3\\buffer_rams_blk_mem_gen_0_3.xci",
+        "inst_hier_path": "UPPER",
+        "parameters": {
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "330"
+          },
+          "Write_Width_A": {
+            "value": "128"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTA_0_1": {
+        "interface_ports": [
+          "UPPER_PREVIOUS_PORTA_0",
+          "UPPER_PREVIOUS/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTA_1_1": {
+        "interface_ports": [
+          "PREVIOUS_PORTA_1",
+          "PREVIOUS/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTA_2_1": {
+        "interface_ports": [
+          "UPPER_PORTA_2",
+          "UPPER/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTB_0_1": {
+        "interface_ports": [
+          "UPPER_PREVIOUS_PORTB_0",
+          "UPPER_PREVIOUS/BRAM_PORTB"
+        ]
+      },
+      "BRAM_PORTB_1_1": {
+        "interface_ports": [
+          "PREVIOUS_PORTB_1",
+          "PREVIOUS/BRAM_PORTB"
+        ]
+      },
+      "BRAM_PORTB_2_1": {
+        "interface_ports": [
+          "UPPER_PORTB_2",
+          "UPPER/BRAM_PORTB"
+        ]
+      }
+    }
+  }
+}

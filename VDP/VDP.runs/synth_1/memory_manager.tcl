@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param general.maxThreads 12
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -88,6 +87,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v
   C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v
   C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/matrix_operations.v
   C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v
@@ -101,6 +101,12 @@ set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/D
 add_files C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/bd/frame_buffer/frame_buffer.bd
 set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/ip/frame_buffer_blk_mem_gen_0_0/frame_buffer_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/frame_buffer_ooc.xdc]
+
+add_files C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/bd/buffer_rams/buffer_rams.bd
+set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/buffer_rams_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

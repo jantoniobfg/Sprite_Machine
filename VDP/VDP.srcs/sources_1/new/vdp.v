@@ -24,7 +24,106 @@ module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer
                       input[127:0] sprite_in, input[13:0] sprite_address, input sprite_write,
                       input [14:0]BRAM_PORTB_0_addr, wire [127:0]BRAM_PORTB_0_dout);
 
-  
+    reg [8:0]PREVIOUS_PORTA_1_addr;
+    wire PREVIOUS_PORTA_1_clk;
+    reg [127:0]PREVIOUS_PORTA_1_din;
+    reg PREVIOUS_PORTA_1_en;
+    reg [0:0]PREVIOUS_PORTA_1_we;
+    reg [8:0]PREVIOUS_PORTB_1_addr;
+    wire PREVIOUS_PORTB_1_clk;
+    wire [127:0]PREVIOUS_PORTB_1_dout;
+    reg PREVIOUS_PORTB_1_en;
+    reg [8:0]UPPER_PORTA_2_addr;
+    wire UPPER_PORTA_2_clk;
+    reg [127:0]UPPER_PORTA_2_din;
+    reg UPPER_PORTA_2_en;
+    reg [0:0]UPPER_PORTA_2_we;
+    reg [8:0]UPPER_PORTB_2_addr;
+    wire UPPER_PORTB_2_clk;
+    wire [127:0]UPPER_PORTB_2_dout;
+    reg UPPER_PORTB_2_en;
+    reg [8:0]UPPER_PREVIOUS_PORTA_0_addr;
+    wire UPPER_PREVIOUS_PORTA_0_clk;
+    reg [127:0]UPPER_PREVIOUS_PORTA_0_din;
+    reg UPPER_PREVIOUS_PORTA_0_en;
+    reg [0:0]UPPER_PREVIOUS_PORTA_0_we;
+    reg [8:0]UPPER_PREVIOUS_PORTB_0_addr;
+    wire UPPER_PREVIOUS_PORTB_0_clk;
+    wire [127:0]UPPER_PREVIOUS_PORTB_0_dout;
+    reg UPPER_PREVIOUS_PORTB_0_en;
+    
+   buffer_rams_wrapper buffer_rams
+   (PREVIOUS_PORTA_1_addr,
+    PREVIOUS_PORTA_1_clk,
+    PREVIOUS_PORTA_1_din,
+    PREVIOUS_PORTA_1_en,
+    PREVIOUS_PORTA_1_we,
+    PREVIOUS_PORTB_1_addr,
+    PREVIOUS_PORTB_1_clk,
+    PREVIOUS_PORTB_1_dout,
+    PREVIOUS_PORTB_1_en,
+    UPPER_PORTA_2_addr,
+    UPPER_PORTA_2_clk,
+    UPPER_PORTA_2_din,
+    UPPER_PORTA_2_en,
+    UPPER_PORTA_2_we,
+    UPPER_PORTB_2_addr,
+    UPPER_PORTB_2_clk,
+    UPPER_PORTB_2_dout,
+    UPPER_PORTB_2_en,
+    UPPER_PREVIOUS_PORTA_0_addr,
+    UPPER_PREVIOUS_PORTA_0_clk,
+    UPPER_PREVIOUS_PORTA_0_din,
+    UPPER_PREVIOUS_PORTA_0_en,
+    UPPER_PREVIOUS_PORTA_0_we,
+    UPPER_PREVIOUS_PORTB_0_addr,
+    UPPER_PREVIOUS_PORTB_0_clk,
+    UPPER_PREVIOUS_PORTB_0_dout,
+    UPPER_PREVIOUS_PORTB_0_en);
+    
+
+    
+    assign PREVIOUS_PORTA_1_clk=clk;
+    assign PREVIOUS_PORTB_1_clk=clk;
+    assign UPPER_PORTA_2_clk=clk;
+    assign UPPER_PORTB_2_clk=clk;
+    assign UPPER_PREVIOUS_PORTA_0_clk=clk;
+    assign UPPER_PREVIOUS_PORTB_0_clk=clk;
+    
+    initial begin
+    
+    PREVIOUS_PORTA_1_addr=9'd0;
+    PREVIOUS_PORTA_1_din=128'd0;
+    PREVIOUS_PORTA_1_en=1'b1;
+    PREVIOUS_PORTA_1_we=1'b0;
+    PREVIOUS_PORTB_1_addr=9'd0;
+    PREVIOUS_PORTB_1_en=1'd1;
+    UPPER_PORTA_2_addr=9'd0;
+    UPPER_PORTA_2_din=128'd0;
+    UPPER_PORTA_2_en=1'b1;
+    UPPER_PORTA_2_we=1'b0;
+    UPPER_PORTB_2_addr=9'd0;
+    UPPER_PORTB_2_en=1'b1;
+    UPPER_PREVIOUS_PORTA_0_addr=9'd0;
+    UPPER_PREVIOUS_PORTA_0_din=128'd0;
+    UPPER_PREVIOUS_PORTA_0_en=1'b1;
+    UPPER_PREVIOUS_PORTA_0_we=1'b0;
+    UPPER_PREVIOUS_PORTB_0_addr=9'd0;
+    UPPER_PREVIOUS_PORTB_0_en=1'b1;
+    
+        
+    end
+   
+        
+   
+   
+   
+   
+   
+   
+   
+   
+   
     
 
   wire [14:0]BRAM_PORTA_0_addr;
@@ -97,15 +196,15 @@ sprite_mem_wrapper SPRAM
     reg[14:0] base_addr_frame_buffer_copy,base_addr_frame_buffer_copy_to_save;
     reg last=0;
     
-    reg [127:0] partial_frame_buffer [322:0];
+    //reg [127:0] partial_frame_buffer [322:0];
     reg cleaning_pfb;
     reg [7:0] h_counter_cleaning;
     
     
-    reg [127:0] last_upper;
-    reg [127:0] lasti;
-    reg [127:0] upper;
-    reg [127:0] newi;
+    wire [127:0] last_upper;
+    wire [127:0] lasti;
+    wire [127:0] upper;
+    wire [127:0] newi;
     wire [127:0] to_save;
     matrix_operations m_op( last_upper, lasti, upper, newi, h_shift, v_shift, to_save);
 
@@ -138,15 +237,15 @@ sprite_mem_wrapper SPRAM
         SPRITE_PORTB_0_addr=14'b0;
         cleaning_pfb=1'b0;
         upper_block_up=1'b0;
-        for(i=0;i<162;i=i+1) begin
+     /*   for(i=0;i<162;i=i+1) begin
             partial_frame_buffer[i]<=128'd0;
-        end
+        end*/
         
         h_counter_cleaning=0;
-        last_upper=128'd0;
-        lasti=128'd0;
-        upper=128'd0;
-        newi=128'd0;
+        //last_upper=128'd0;
+        //lasti=128'd0;
+        //upper=128'd0;
+        //newi=128'd0;
         
         h_counter=0;
         v_counter=0;
@@ -168,6 +267,23 @@ sprite_mem_wrapper SPRAM
     
     reg[2:0] sprite_buffer_to_remove=0;
     
+    
+    /////////////////////////////////////////////
+    reg first_line;
+    reg [8:0] upper_addr_write, new_addr_write,upper_previous_addr_read, previous_addr_read;
+    
+    
+    initial begin
+        first_line=1'b0;
+        upper_addr_write=9'd0;
+        new_addr_write=9'd0;
+        upper_previous_addr_read=9'd0;
+        previous_addr_read=9'd0;
+    
+    end
+    
+    /////////////////////////////////////////////
+    
     always @(posedge clk) begin
         if(posedge_start==1'b1) begin
             h_counter<=0;
@@ -175,17 +291,8 @@ sprite_mem_wrapper SPRAM
             h_size_copy<=h_size;
             v_size_copy<=v_size;
             
-            if(v_shift>0||h_shift>0) begin
-                partial_frame_buffer[0]<=128'b0;
-                partial_frame_buffer[160]<=128'b0;
-                cleaning_pfb<=1'b1;
-                h_counter_cleaning<=1;
-                           
-            end
-
-            else begin
-                begining_of_copy<=1'b1;
-            end
+            begining_of_copy<=1'b1;
+            
             
             base_addr_frame_buffer_copy<=base_addr_frame_buffer;
             base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer;
@@ -195,11 +302,26 @@ sprite_mem_wrapper SPRAM
             prev_buffer_pos_counter<=0;
             
             shift_edges<=2'b0;
-            sprite_buffer_to_remove<=3'd0;  
+            sprite_buffer_to_remove<=3'd0;
+            
+            SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
+            base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy+1;
+            wait_for_mem<=2'd2;
+            
+            
+            
+            first_line=1'b1;
+            upper_addr_write=9'd161;
+            new_addr_write=9'd1;
+            upper_previous_addr_read=9'd160;
+            previous_addr_read=9'd0;
+            
+              
         end
         
         
         else if(busy_in==1'b1 && last==1'b0) begin
+        /*
             if(cleaning_pfb==1'b1) begin
                 partial_frame_buffer[h_counter_cleaning]<=128'b0;
                 partial_frame_buffer[h_counter_cleaning+160]<=128'b0;
@@ -211,127 +333,124 @@ sprite_mem_wrapper SPRAM
                 h_counter_cleaning<=h_counter_cleaning+1;
                 
             end
-            else begin
-                if(begining_of_copy==1'b1) begin
-                    SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
-                    base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy+1;
-                    wait_for_mem<=2'd2;
-                    begining_of_copy<=1'b0;
+            else begin*/
+            if(begining_of_copy==1'b1) begin
+                
+            end
+            
+            else if(wait_for_mem==2'b0) begin
+                
+                if(h_counter+1<h_size_copy) begin
+                    h_counter<=h_counter+1;
+                    base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy+1;
                 end
                 
-                else if(wait_for_mem==2'b0) begin
+                else begin
+                    if(h_shift!=0) begin
                     
-                    if(h_counter+1<h_size_copy) begin
-                        h_counter<=h_counter+1;
-                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy+1;
-                    end
-                    
-                    else begin
-                        if(h_shift!=0) begin
-                        
-                                if(shift_edges==2'd0||shift_edges==2'd2) begin
-                                    if(shift_edges==2'd2) begin
-                                        last<=1'b1;
-                                    end
-                                    shift_edges<=2'd1;
-                                    base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy+1;
-                                   
-                                    sprite_buffer_to_remove<=3'd3;
-                                    
+                            if(shift_edges==2'd0||shift_edges==2'd2) begin
+                                if(shift_edges==2'd2) begin
+                                    last<=1'b1;
                                 end
+                                shift_edges<=2'd1;
+                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy+1;
+                               
+                                sprite_buffer_to_remove<=3'd3;
                                 
-                                else begin
-                                    if(v_counter+1<v_size_copy) begin
-                                        v_counter<=v_counter+1;
-                                        h_counter<=0;
-                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
-                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
-                                        if(shift_edges==2'd1) begin
-                                            shift_edges<=2'd0;
-                                            wait_for_mem<=2'd3;//////ATENÇÃO VERIFICAR FUNCIONAMENTO
-                                            //base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy-2;
-                                        end
-                                    end
-                                    else begin
-                                        if(v_shift!=0) begin
-                                            if(shift_edges==2'd0||shift_edges==2'd1)begin
-                                                shift_edges<=2'd2;
-                                                h_counter<=0;
-                                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
-                                                base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
-                                            end
-                                        end
-                                        last<=1'b1;
-                                    end
-                                end
-                                
-                        end
-                        else begin
-                            if(v_counter+1<v_size_copy) begin
-                                v_counter<=v_counter+1;
-                                base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
-                                base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
-                                h_counter<=0;
                             end
+                            
                             else begin
-                                if(v_shift!=0) begin
-                                    if(shift_edges==2'd0||shift_edges==2'd1)begin
-                                        shift_edges<=2'd2;
-                                        h_counter<=0;
-                                        base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
-                                        base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
-                                    end
-                                    if(shift_edges==2'd2)begin
+                                if(v_counter+1<v_size_copy) begin
+                                    v_counter<=v_counter+1;
+                                    h_counter<=0;
+                                    base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                    base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
+                                    if(shift_edges==2'd1) begin
                                         shift_edges<=2'd0;
-                                        last<=1'b1;
+                                        wait_for_mem<=2'd3;//////ATENÇÃO VERIFICAR FUNCIONAMENTO
+                                        //base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy-2;
                                     end
-                                    
                                 end
                                 else begin
+                                    if(v_shift!=0) begin
+                                        if(shift_edges==2'd0||shift_edges==2'd1)begin
+                                            shift_edges<=2'd2;
+                                            h_counter<=0;
+                                            base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                            base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
+                                        end
+                                    end
                                     last<=1'b1;
                                 end
                             end
-                        end
-                        
-                    end
-                    
-                    
-                end
-
-                else begin
-                    wait_for_mem<=wait_for_mem-1; 
-                end
-                
-                if(upper_block_up==1'b1) begin
-                    partial_frame_buffer[prev_buffer_pos_counter+81]<=newi;
-                end
-                else begin
-                    partial_frame_buffer[prev_buffer_pos_counter+1]<=newi;
-                end
-                    
-                SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
-                if(shift_edges==2'd0||shift_edges==2'd1) begin
-                    if(sprite_buffer_to_remove!=3'd0) begin
-                        base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy-sprite_buffer_to_remove;
-                        sprite_buffer_to_remove<=0;
+                            
                     end
                     else begin
-                        base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy+1;
+                        if(v_counter+1<v_size_copy) begin
+                            v_counter<=v_counter+1;
+                            base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                            base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
+                            h_counter<=0;
+                        end
+                        else begin
+                            if(v_shift!=0) begin
+                                if(shift_edges==2'd0||shift_edges==2'd1)begin
+                                    shift_edges<=2'd2;
+                                    h_counter<=0;
+                                    base_addr_frame_buffer_copy<=base_addr_frame_buffer_copy_to_save+160;
+                                    base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer_copy_to_save+160;
+                                end
+                                if(shift_edges==2'd2)begin
+                                    shift_edges<=2'd0;
+                                    last<=1'b1;
+                                end
+                                
+                            end
+                            else begin
+                                last<=1'b1;
+                            end
+                        end
                     end
                     
                 end
-                
-                if((prev_buffer_pos_counter+(1&&h_shift==0))==h_size_copy)begin
-                    prev_buffer_pos_counter<=0;
-                    upper_block_up<=~upper_block_up;
-                end
-                else if(wait_for_mem==2'b0) begin
-                    prev_buffer_pos_counter<=prev_buffer_pos_counter+1;
-                end
-
-             end
                     
+                    
+            end
+
+            else begin
+                wait_for_mem<=wait_for_mem-1; 
+            end
+            
+            if(upper_block_up==1'b1) begin
+               /* partial_frame_buffer[prev_buffer_pos_counter+81]<=newi;*/
+            end
+            else begin
+               /* partial_frame_buffer[prev_buffer_pos_counter+1]<=newi;*/
+            end
+                    
+            SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
+            if(shift_edges==2'd0||shift_edges==2'd1) begin
+                if(sprite_buffer_to_remove!=3'd0) begin
+                    base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy-sprite_buffer_to_remove;
+                    sprite_buffer_to_remove<=0;
+                end
+                else begin
+                    base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy+1;
+                end
+                
+            end
+            
+            if((prev_buffer_pos_counter+(1&&h_shift==0))==h_size_copy)begin
+                prev_buffer_pos_counter<=0;
+                upper_block_up<=~upper_block_up;
+            end
+            else if(wait_for_mem==2'b0) begin
+                prev_buffer_pos_counter<=prev_buffer_pos_counter+1;
+            end
+
          end
+                    
+         
          else if(last==1'b1) begin
             busy_in<=1'b0;
          end
@@ -352,25 +471,12 @@ sprite_mem_wrapper SPRAM
     assign BRAM_PORTA_0_din=to_save;
     assign BRAM_PORTA_0_addr=base_addr_frame_buffer_copy;
     
-    always @ * begin
-        if(upper_block_up==1'b0) begin
-            newi<=SPRITE_PORTB_0_dout & {(128){shift_edges==2'd0}};
-            lasti<=partial_frame_buffer[prev_buffer_pos_counter];
-            upper<=partial_frame_buffer[prev_buffer_pos_counter+161];
-            last_upper<=partial_frame_buffer[prev_buffer_pos_counter+160];
-            
-        end
-        
-        
-        
-        else begin
-            upper<=partial_frame_buffer[prev_buffer_pos_counter+1];
-            last_upper<=partial_frame_buffer[prev_buffer_pos_counter];
-            newi<=SPRITE_PORTB_0_dout &  {(128){shift_edges==2'd0}};
-            lasti<=partial_frame_buffer[prev_buffer_pos_counter+160];
-        end
+    assign upper=UPPER_PORTB_2_dout;
+    assign last_upper=UPPER_PREVIOUS_PORTB_0_dout;
+    assign newi=SPRITE_PORTB_0_dout &  {(128){shift_edges==2'd0}};
+    assign lasti=PREVIOUS_PORTB_1_dout;
     
-    end
+    
     
     
 

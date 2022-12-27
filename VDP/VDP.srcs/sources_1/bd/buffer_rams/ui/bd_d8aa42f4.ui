@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-626,-702",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port UPPER_PREVIOUS_PORTA_0 -pg 1 -lvl 0 -x -30 -y -560 -defaultsOSRD
+preplace port UPPER_PREVIOUS_PORTB_0 -pg 1 -lvl 0 -x -30 -y -530 -defaultsOSRD
+preplace port PREVIOUS_PORTA_1 -pg 1 -lvl 0 -x -30 -y -440 -defaultsOSRD
+preplace port PREVIOUS_PORTB_1 -pg 1 -lvl 0 -x -30 -y -410 -defaultsOSRD
+preplace port UPPER_PORTA_2 -pg 1 -lvl 0 -x -30 -y -320 -defaultsOSRD
+preplace port UPPER_PORTB_2 -pg 1 -lvl 0 -x -30 -y -290 -defaultsOSRD
+preplace inst UPPER_PREVIOUS -pg 1 -lvl 1 -x 130 -y -540 -defaultsOSRD
+preplace inst PREVIOUS -pg 1 -lvl 1 -x 130 -y -420 -defaultsOSRD
+preplace inst UPPER -pg 1 -lvl 1 -x 130 -y -300 -defaultsOSRD
+preplace netloc BRAM_PORTA_0_1 1 0 1 -10J -560n
+preplace netloc BRAM_PORTB_0_1 1 0 1 NJ -530
+preplace netloc BRAM_PORTA_1_1 1 0 1 -10 -440n
+preplace netloc BRAM_PORTB_1_1 1 0 1 N -410
+preplace netloc BRAM_PORTA_2_1 1 0 1 -10J -320n
+preplace netloc BRAM_PORTB_2_1 1 0 1 NJ -290
+levelinfo -pg 1 -30 130 240
+pagesize -pg 1 -db -bbox -sgen -260 -610 240 120
+"
+}
+

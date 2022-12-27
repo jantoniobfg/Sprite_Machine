@@ -13,6 +13,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==frame_buffe
 # IP: bd/frame_buffer/ip/frame_buffer_blk_mem_gen_0_0/frame_buffer_blk_mem_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==frame_buffer_blk_mem_gen_0_0 || ORIG_REF_NAME==frame_buffer_blk_mem_gen_0_0} -quiet] -quiet
 
+# Block Designs: bd/buffer_rams/buffer_rams.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams || ORIG_REF_NAME==buffer_rams} -quiet] -quiet
+
+# IP: bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams_blk_mem_gen_0_0 || ORIG_REF_NAME==buffer_rams_blk_mem_gen_0_0} -quiet] -quiet
+
+# IP: bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams_blk_mem_gen_0_1 || ORIG_REF_NAME==buffer_rams_blk_mem_gen_0_1} -quiet] -quiet
+
+# IP: bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams_blk_mem_gen_0_3 || ORIG_REF_NAME==buffer_rams_blk_mem_gen_0_3} -quiet] -quiet
+
 # XDC: c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/sprite_mem_ooc.xdc
 
 # XDC: c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/frame_buffer_ooc.xdc
+
+# XDC: c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/buffer_rams_ooc.xdc
