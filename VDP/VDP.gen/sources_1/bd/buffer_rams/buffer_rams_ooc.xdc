@@ -8,8 +8,6 @@
 ################################################################################
 create_clock -name UPPER_PREVIOUS_PORTA_0_clk -period 10 [get_ports UPPER_PREVIOUS_PORTA_0_clk]
 create_clock -name UPPER_PREVIOUS_PORTB_0_clk -period 10 [get_ports UPPER_PREVIOUS_PORTB_0_clk]
-create_clock -name PREVIOUS_PORTA_1_clk -period 10 [get_ports PREVIOUS_PORTA_1_clk]
-create_clock -name PREVIOUS_PORTB_1_clk -period 10 [get_ports PREVIOUS_PORTB_1_clk]
 create_clock -name UPPER_PORTA_2_clk -period 10 [get_ports UPPER_PORTA_2_clk]
 create_clock -name UPPER_PORTB_2_clk -period 10 [get_ports UPPER_PORTB_2_clk]
 

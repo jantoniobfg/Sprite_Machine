@@ -58,7 +58,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="134"/>
+    <Option Name="WTXSimLaunchSim" Val="154"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -115,9 +115,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="buffer_rams.bd" FileRelPathName="ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1.xci">
-          <Proxy FileSetName="buffer_rams_blk_mem_gen_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="buffer_rams.bd" FileRelPathName="ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3.xci">
           <Proxy FileSetName="buffer_rams_blk_mem_gen_0_3"/>
         </CompFileExtendedInfo>
@@ -238,13 +235,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="buffer_rams_blk_mem_gen_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buffer_rams_blk_mem_gen_0_1" RelGenDir="$PGENDIR/buffer_rams_blk_mem_gen_0_1">
-      <Config>
-        <Option Name="TopModule" Val="buffer_rams_blk_mem_gen_0_1"/>
-        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="buffer_rams_blk_mem_gen_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buffer_rams_blk_mem_gen_0_3" RelGenDir="$PGENDIR/buffer_rams_blk_mem_gen_0_3">
       <Config>
         <Option Name="TopModule" Val="buffer_rams_blk_mem_gen_0_3"/>
@@ -303,16 +293,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="buffer_rams_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="buffer_rams_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="buffer_rams_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buffer_rams_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buffer_rams_blk_mem_gen_0_1_synth_1" Type="Ft3:Synth" SrcSet="buffer_rams_blk_mem_gen_0_1" Part="xc7z020clg400-1" ConstrsSet="buffer_rams_blk_mem_gen_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buffer_rams_blk_mem_gen_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_1_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
@@ -384,23 +364,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="buffer_rams_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buffer_rams_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buffer_rams_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buffer_rams_blk_mem_gen_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buffer_rams_blk_mem_gen_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buffer_rams_blk_mem_gen_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buffer_rams_blk_mem_gen_0_1_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
