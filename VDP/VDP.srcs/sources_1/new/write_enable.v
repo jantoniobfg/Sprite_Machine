@@ -22,22 +22,23 @@
 module write_enable( input [127:0] sprite_in, output [15:0] we
 
     );
-    assign we[0]=sprite_in[0]&sprite_in[1]&sprite_in[2]&sprite_in[3];
-    assign we[1]=sprite_in[4]&sprite_in[5]&sprite_in[6]&sprite_in[7];
-    assign we[2]=sprite_in[8]&sprite_in[9]&sprite_in[10]&sprite_in[11];
-    assign we[3]=sprite_in[12]&sprite_in[13]&sprite_in[14]&sprite_in[15];
-    assign we[4]=sprite_in[16]&sprite_in[17]&sprite_in[18]&sprite_in[19];
-    assign we[5]=sprite_in[20]&sprite_in[21]&sprite_in[22]&sprite_in[23];
-    assign we[6]=sprite_in[24]&sprite_in[25]&sprite_in[26]&sprite_in[27];
-    assign we[7]=sprite_in[28]&sprite_in[29]&sprite_in[30]&sprite_in[31];
-    assign we[8]=sprite_in[32]&sprite_in[33]&sprite_in[34]&sprite_in[35];
-    assign we[9]=sprite_in[36]&sprite_in[37]&sprite_in[38]&sprite_in[39];
-    assign we[10]=sprite_in[40]&sprite_in[41]&sprite_in[42]&sprite_in[43];
-    assign we[11]=sprite_in[44]&sprite_in[45]&sprite_in[46]&sprite_in[47];
-    assign we[12]=sprite_in[48]&sprite_in[49]&sprite_in[50]&sprite_in[51];
-    assign we[13]=sprite_in[52]&sprite_in[53]&sprite_in[54]&sprite_in[55];
-    assign we[14]=sprite_in[56]&sprite_in[57]&sprite_in[58]&sprite_in[59];
-    assign we[15]=sprite_in[60]&sprite_in[61]&sprite_in[62]&sprite_in[63];
+    assign we[0]= sprite_in[0] | sprite_in[1] | sprite_in[2] | sprite_in[3] | sprite_in[4] | sprite_in[5] | sprite_in[6] | sprite_in[7];
+assign we[1]= sprite_in[8] | sprite_in[9] | sprite_in[10] | sprite_in[11] | sprite_in[12] | sprite_in[13] | sprite_in[14] | sprite_in[15];
+assign we[2]= sprite_in[16] | sprite_in[17] | sprite_in[18] | sprite_in[19] | sprite_in[20] | sprite_in[21] | sprite_in[22] | sprite_in[23];
+assign we[3]= sprite_in[24] | sprite_in[25] | sprite_in[26] | sprite_in[27] | sprite_in[28] | sprite_in[29] | sprite_in[30] | sprite_in[31];
+assign we[4]= sprite_in[32] | sprite_in[33] | sprite_in[34] | sprite_in[35] | sprite_in[36] | sprite_in[37] | sprite_in[38] | sprite_in[39];
+assign we[5]= sprite_in[40] | sprite_in[41] | sprite_in[42] | sprite_in[43] | sprite_in[44] | sprite_in[45] | sprite_in[46] | sprite_in[47];
+assign we[6]= sprite_in[48] | sprite_in[49] | sprite_in[50] | sprite_in[51] | sprite_in[52] | sprite_in[53] | sprite_in[54] | sprite_in[55];
+assign we[7]= sprite_in[56] | sprite_in[57] | sprite_in[58] | sprite_in[59] | sprite_in[60] | sprite_in[61] | sprite_in[62] | sprite_in[63];
+assign we[8]= sprite_in[64] | sprite_in[65] | sprite_in[66] | sprite_in[67] | sprite_in[68] | sprite_in[69] | sprite_in[70] | sprite_in[71];
+assign we[9]= sprite_in[72] | sprite_in[73] | sprite_in[74] | sprite_in[75] | sprite_in[76] | sprite_in[77] | sprite_in[78] | sprite_in[79];
+assign we[10]= sprite_in[80] | sprite_in[81] | sprite_in[82] | sprite_in[83] | sprite_in[84] | sprite_in[85] | sprite_in[86] | sprite_in[87];
+assign we[11]= sprite_in[88] | sprite_in[89] | sprite_in[90] | sprite_in[91] | sprite_in[92] | sprite_in[93] | sprite_in[94] | sprite_in[95];
+assign we[12]= sprite_in[96] | sprite_in[97] | sprite_in[98] | sprite_in[99] | sprite_in[100] | sprite_in[101] | sprite_in[102] | sprite_in[103];
+assign we[13]= sprite_in[104] | sprite_in[105] | sprite_in[106] | sprite_in[107] | sprite_in[108] | sprite_in[109] | sprite_in[110] | sprite_in[111];
+assign we[14]= sprite_in[112] | sprite_in[113] | sprite_in[114] | sprite_in[115] | sprite_in[116] | sprite_in[117] | sprite_in[118] | sprite_in[119];
+assign we[15]= sprite_in[120] | sprite_in[121] | sprite_in[122] | sprite_in[123] | sprite_in[124] | sprite_in[125] | sprite_in[126] | sprite_in[127];
+
     
 
     

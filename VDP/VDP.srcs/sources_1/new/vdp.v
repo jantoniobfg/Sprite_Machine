@@ -29,7 +29,7 @@ module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer
     reg [127:0]PREVIOUS_PORTA_1_din;
     reg PREVIOUS_PORTA_1_en;
     reg [0:0]PREVIOUS_PORTA_1_we;
-    reg [8:0]PREVIOUS_PORTB_1_addr;
+    wire [8:0]PREVIOUS_PORTB_1_addr;
     wire PREVIOUS_PORTB_1_clk;
     wire [127:0]PREVIOUS_PORTB_1_dout;
     reg PREVIOUS_PORTB_1_en;
@@ -38,7 +38,7 @@ module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer
     reg [127:0]UPPER_PORTA_2_din;
     reg UPPER_PORTA_2_en;
     reg [0:0]UPPER_PORTA_2_we;
-    reg [8:0]UPPER_PORTB_2_addr;
+    wire [8:0]UPPER_PORTB_2_addr;
     wire UPPER_PORTB_2_clk;
     wire [127:0]UPPER_PORTB_2_dout;
     reg UPPER_PORTB_2_en;
@@ -47,7 +47,7 @@ module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer
     reg [127:0]UPPER_PREVIOUS_PORTA_0_din;
     reg UPPER_PREVIOUS_PORTA_0_en;
     reg [0:0]UPPER_PREVIOUS_PORTA_0_we;
-    reg [8:0]UPPER_PREVIOUS_PORTB_0_addr;
+    wire [8:0]UPPER_PREVIOUS_PORTB_0_addr;
     wire UPPER_PREVIOUS_PORTB_0_clk;
     wire [127:0]UPPER_PREVIOUS_PORTB_0_dout;
     reg UPPER_PREVIOUS_PORTB_0_en;
@@ -96,22 +96,22 @@ module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer
     PREVIOUS_PORTA_1_din=128'd0;
     PREVIOUS_PORTA_1_en=1'b1;
     PREVIOUS_PORTA_1_we=1'b0;
-    PREVIOUS_PORTB_1_addr=9'd0;
+    //PREVIOUS_PORTB_1_addr=9'd0;
     PREVIOUS_PORTB_1_en=1'd1;
     UPPER_PORTA_2_addr=9'd0;
     UPPER_PORTA_2_din=128'd0;
     UPPER_PORTA_2_en=1'b1;
     UPPER_PORTA_2_we=1'b0;
-    UPPER_PORTB_2_addr=9'd0;
+    //UPPER_PORTB_2_addr=9'd0;
     UPPER_PORTB_2_en=1'b1;
     UPPER_PREVIOUS_PORTA_0_addr=9'd0;
     UPPER_PREVIOUS_PORTA_0_din=128'd0;
     UPPER_PREVIOUS_PORTA_0_en=1'b1;
     UPPER_PREVIOUS_PORTA_0_we=1'b0;
-    UPPER_PREVIOUS_PORTB_0_addr=9'd0;
+    //UPPER_PREVIOUS_PORTB_0_addr=9'd0;
     UPPER_PREVIOUS_PORTB_0_en=1'b1;
     
-        
+    
     end
    
         
@@ -128,9 +128,9 @@ module memory_manager(input clk, input start, input[14:0] base_addr_frame_buffer
 
   wire [14:0]BRAM_PORTA_0_addr;
   wire BRAM_PORTA_0_clk;
-  wire [513:0]BRAM_PORTA_0_din;
+  wire [127:0]BRAM_PORTA_0_din;
   reg BRAM_PORTA_0_en;
-  wire [63:0]BRAM_PORTA_0_we;
+  wire [15:0]BRAM_PORTA_0_we;
   
   
   wire BRAM_PORTB_0_clk;
@@ -160,7 +160,7 @@ frame_buffer_wrapper VRAM
   reg [127:0]SPRITE_PORTA_0_din;
   reg SPRITE_PORTA_0_en;
   reg [0:0]SPRITE_PORTA_0_we;
-  reg [13:0]SPRITE_PORTB_0_addr;
+  wire [13:0]SPRITE_PORTB_0_addr;
   wire SPRITE_PORTB_0_clk;
   wire [127:0]SPRITE_PORTB_0_dout;
   reg SPRITE_PORTB_0_en;
@@ -234,7 +234,7 @@ sprite_mem_wrapper SPRAM
         SPRITE_PORTA_0_addr=14'b0;
         SPRITE_PORTA_0_din=128'b0;
         SPRITE_PORTA_0_we=1'b0;
-        SPRITE_PORTB_0_addr=14'b0;
+        //SPRITE_PORTB_0_addr=14'b0;
         cleaning_pfb=1'b0;
         upper_block_up=1'b0;
      /*   for(i=0;i<162;i=i+1) begin
@@ -263,6 +263,7 @@ sprite_mem_wrapper SPRAM
         shift_edges=2'b0;
     end
   
+    
     integer prev_buffer_pos_counter=0;
     
     reg[2:0] sprite_buffer_to_remove=0;
@@ -273,6 +274,10 @@ sprite_mem_wrapper SPRAM
     reg [8:0] upper_addr_write, new_addr_write,upper_previous_addr_read, previous_addr_read;
     
     
+    assign PREVIOUS_PORTB_1_addr=previous_addr_read;
+    assign UPPER_PORTB_2_addr=upper_previous_addr_read+9'd1;
+    assign UPPER_PREVIOUS_PORTB_0_addr=upper_previous_addr_read;
+  
     initial begin
         first_line=1'b0;
         upper_addr_write=9'd0;
@@ -296,7 +301,7 @@ sprite_mem_wrapper SPRAM
             
             base_addr_frame_buffer_copy<=base_addr_frame_buffer;
             base_addr_frame_buffer_copy_to_save<=base_addr_frame_buffer;
-            base_addr_sprite_buffer_copy<=base_addr_sprite_buffer;
+            //base_addr_sprite_buffer_copy<=base_addr_sprite_buffer;
             busy_in<=1'b1;
             last<=1'b0;
             prev_buffer_pos_counter<=0;
@@ -304,9 +309,9 @@ sprite_mem_wrapper SPRAM
             shift_edges<=2'b0;
             sprite_buffer_to_remove<=3'd0;
             
-            SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
-            base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy+1;
-            wait_for_mem<=2'd2;
+            //SPRITE_PORTB_0_addr<=base_addr_sprite_buffer;
+            base_addr_sprite_buffer_copy<=base_addr_sprite_buffer;
+            
             
             
             
@@ -316,7 +321,7 @@ sprite_mem_wrapper SPRAM
             upper_previous_addr_read=9'd160;
             previous_addr_read=9'd0;
             
-              
+            wait_for_mem<=2'd2;
         end
         
         
@@ -333,12 +338,13 @@ sprite_mem_wrapper SPRAM
                 h_counter_cleaning<=h_counter_cleaning+1;
                 
             end
-            else begin*/
+            else begin
             if(begining_of_copy==1'b1) begin
                 
             end
             
-            else if(wait_for_mem==2'b0) begin
+            else*/
+            if(wait_for_mem==2'b0) begin
                 
                 if(h_counter+1<h_size_copy) begin
                     h_counter<=h_counter+1;
@@ -421,6 +427,17 @@ sprite_mem_wrapper SPRAM
                 wait_for_mem<=wait_for_mem-1; 
             end
             
+            
+            upper_previous_addr_read=upper_previous_addr_read+9'd1;
+            previous_addr_read=previous_addr_read+9'd1;
+            
+            
+            
+            
+            
+            
+            
+            
             if(upper_block_up==1'b1) begin
                /* partial_frame_buffer[prev_buffer_pos_counter+81]<=newi;*/
             end
@@ -428,7 +445,7 @@ sprite_mem_wrapper SPRAM
                /* partial_frame_buffer[prev_buffer_pos_counter+1]<=newi;*/
             end
                     
-            SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
+            //SPRITE_PORTB_0_addr<=base_addr_sprite_buffer_copy;
             if(shift_edges==2'd0||shift_edges==2'd1) begin
                 if(sprite_buffer_to_remove!=3'd0) begin
                     base_addr_sprite_buffer_copy<=base_addr_sprite_buffer_copy-sprite_buffer_to_remove;
@@ -439,6 +456,8 @@ sprite_mem_wrapper SPRAM
                 end
                 
             end
+            
+           
             
             if((prev_buffer_pos_counter+(1&&h_shift==0))==h_size_copy)begin
                 prev_buffer_pos_counter<=0;
@@ -467,12 +486,14 @@ sprite_mem_wrapper SPRAM
         end
     end
     
+    assign SPRITE_PORTB_0_addr=base_addr_sprite_buffer_copy;
+    
     assign BRAM_PORTA_0_we=wei&write_activate&{(16){~last}};
     assign BRAM_PORTA_0_din=to_save;
     assign BRAM_PORTA_0_addr=base_addr_frame_buffer_copy;
     
-    assign upper=UPPER_PORTB_2_dout;
-    assign last_upper=UPPER_PREVIOUS_PORTB_0_dout;
+    assign upper=UPPER_PORTB_2_dout & {(128){first_line==1'd1}};
+    assign last_upper=UPPER_PREVIOUS_PORTB_0_dout & {(128){first_line==1'd1}};
     assign newi=SPRITE_PORTB_0_dout &  {(128){shift_edges==2'd0}};
     assign lasti=PREVIOUS_PORTB_1_dout;
     

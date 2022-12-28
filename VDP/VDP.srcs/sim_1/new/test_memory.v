@@ -32,11 +32,11 @@ module test_memory(
     reg[13:0] base_addr_sprite_buffer;
     wire busy_in;
     
-    reg[513:0] sprite_in;
+    reg[127:0] sprite_in;
     reg[13:0] sprite_address;
     reg sprite_write;
     reg [14:0]BRAM_PORTB_0_addr;
-    wire [513:0] BRAM_PORTB_0_dout;
+    wire [127:0] BRAM_PORTB_0_dout;
     reg [2:0] h_shift, v_shift;
     reg [7:0] state=0;
     
@@ -95,7 +95,7 @@ module test_memory(
             state<=state+1;
         end
         else if(state==8'd5) begin
-            sprite_in<=128'hFFFFFFFFFFFFFFFF_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_FFFFFFFFFFFFFFFF;
+            sprite_in<=128'hFFFFFFFFFFFFFFFF_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_FFFFFFFF00000000_00000000FFFFFFFF;
             sprite_address<=14'd3;
             sprite_write<=1'b1;
             state<=state+1;
@@ -103,7 +103,7 @@ module test_memory(
         else if(state==8'd6) begin
             sprite_write<=1'b0;
             base_addr_frame_buffer<=32'b0;
-            h_size=8'd1;
+            h_size=8'd2;
             v_size=8'd2;
             h_shift<=3'd0;
             v_shift<=3'd0;
@@ -144,13 +144,13 @@ module test_memory(
         end
         else if(state==8'd12) begin
             
-            BRAM_PORTB_0_addr<=81;
+            BRAM_PORTB_0_addr<=161;
             state<=state+1;
             
             
         end
         else if(state==8'd13) begin
-            BRAM_PORTB_0_addr<=82;
+            BRAM_PORTB_0_addr<=162;
             state<=state+1;
             #100;
             $finish;
