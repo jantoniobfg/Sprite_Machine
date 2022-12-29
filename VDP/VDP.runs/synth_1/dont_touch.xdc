@@ -19,9 +19,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams
 # IP: bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams_blk_mem_gen_0_0 || ORIG_REF_NAME==buffer_rams_blk_mem_gen_0_0} -quiet] -quiet
 
-# IP: bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams_blk_mem_gen_0_1 || ORIG_REF_NAME==buffer_rams_blk_mem_gen_0_1} -quiet] -quiet
-
 # IP: bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buffer_rams_blk_mem_gen_0_3 || ORIG_REF_NAME==buffer_rams_blk_mem_gen_0_3} -quiet] -quiet
 

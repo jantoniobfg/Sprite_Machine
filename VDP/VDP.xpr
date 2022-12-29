@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.xpr">
+<Project Version="7" Minor="61" Path="C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7fdc48e9b90e4daf8805fd94f41db533"/>
@@ -58,7 +58,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="154"/>
+    <Option Name="WTXSimLaunchSim" Val="163"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -115,11 +115,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="buffer_rams.bd" FileRelPathName="ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3.xci">
-          <Proxy FileSetName="buffer_rams_blk_mem_gen_0_3"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="buffer_rams.bd" FileRelPathName="ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="buffer_rams_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="buffer_rams.bd" FileRelPathName="ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3.xci">
+          <Proxy FileSetName="buffer_rams_blk_mem_gen_0_3"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v">
@@ -199,6 +199,7 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">

@@ -55,11 +55,11 @@ module matrix_operations(input [127:0] last_upper, input [127:0] last, input[127
     wire [127:0] h0_v0;
     assign h0_v0={new_bytes[3],new_bytes[2],new_bytes[1],new_bytes[0]};
     wire [127:0] h0_v1;
-    assign h0_v1={new_bytes[2],new_bytes[1],new_bytes[0],upper [3]};
+    assign h0_v1={new_bytes[2],new_bytes[1],new_bytes[0],upper_bytes [3]};
     wire [127:0] h0_v2;
-    assign h0_v2={new_bytes[1],new_bytes[0],upper[3],upper [2]};
+    assign h0_v2={new_bytes[1],new_bytes[0],upper_bytes[3],upper_bytes [2]};
     wire [127:0] h0_v3;
-    assign h0_v3={new_bytes[0],upper[3],upper [2],upper [1]};
+    assign h0_v3={new_bytes[0],upper_bytes[3],upper_bytes [2],upper_bytes [1]};
     
     
     wire [127:0] h1_v0;

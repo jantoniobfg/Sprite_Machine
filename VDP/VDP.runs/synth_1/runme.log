@@ -10,7 +10,6 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source memory_manager.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 374.598 ; gain = 65.422
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -22,112 +21,48 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11508
+INFO: [Synth 8-7075] Helper process launched with PID 9428
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'PREVIOUS_PORTA_1_we', assumed default net type 'wire' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:513]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1223.414 ; gain = 407.219
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1223.027 ; gain = 408.066
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'memory_manager' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
 INFO: [Synth 8-6157] synthesizing module 'buffer_rams_wrapper' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'buffer_rams' [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/synth/buffer_rams.v:12]
-INFO: [Synth 8-6157] synthesizing module 'buffer_rams_blk_mem_gen_0_1' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'buffer_rams_blk_mem_gen_0_1' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'buffer_rams_blk_mem_gen_0_3' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'buffer_rams_blk_mem_gen_0_3' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'buffer_rams_blk_mem_gen_0_0' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'buffer_rams_blk_mem_gen_0_0' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'buffer_rams_blk_mem_gen_0_3' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'buffer_rams_blk_mem_gen_0_3' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'buffer_rams_blk_mem_gen_0_0' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'buffer_rams_blk_mem_gen_0_0' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/buffer_rams_blk_mem_gen_0_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'buffer_rams' (0#1) [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/synth/buffer_rams.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'buffer_rams_wrapper' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'frame_buffer_wrapper' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/synth/frame_buffer.v:12]
-INFO: [Synth 8-6157] synthesizing module 'frame_buffer_blk_mem_gen_0_0' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'frame_buffer_blk_mem_gen_0_0' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer_blk_mem_gen_0_0' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer_blk_mem_gen_0_0' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/frame_buffer_blk_mem_gen_0_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/synth/frame_buffer.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'frame_buffer_wrapper' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:12]
-WARNING: [Synth 8-689] width (514) of port connection 'BRAM_PORTA_0_din' does not match port width (128) of module 'frame_buffer_wrapper' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:148]
-WARNING: [Synth 8-689] width (64) of port connection 'BRAM_PORTA_0_we' does not match port width (16) of module 'frame_buffer_wrapper' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:150]
-WARNING: [Synth 8-6104] Input port 'BRAM_PORTB_0_dout' has an internal driver [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:153]
+WARNING: [Synth 8-6104] Input port 'BRAM_PORTB_0_dout' has an internal driver [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:146]
 INFO: [Synth 8-6157] synthesizing module 'sprite_mem_wrapper' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'sprite_mem' [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/synth/sprite_mem.v:12]
-INFO: [Synth 8-6157] synthesizing module 'sprite_mem_blk_mem_gen_0_0' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'sprite_mem_blk_mem_gen_0_0' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-4420-DELL-DIR/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sprite_mem_blk_mem_gen_0_0' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_mem_blk_mem_gen_0_0' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/.Xil/Vivado-2536-DELL-DIR/realtime/sprite_mem_blk_mem_gen_0_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'sprite_mem' (0#1) [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/synth/sprite_mem.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'sprite_mem_wrapper' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'matrix_operations' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/matrix_operations.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'matrix_operations' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/matrix_operations.v:21]
-WARNING: [Synth 8-689] width (3) of port connection 'h_shift' does not match port width (2) of module 'matrix_operations' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:209]
-WARNING: [Synth 8-689] width (3) of port connection 'v_shift' does not match port width (2) of module 'matrix_operations' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:209]
+WARNING: [Synth 8-689] width (3) of port connection 'h_shift' does not match port width (2) of module 'matrix_operations' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:202]
+WARNING: [Synth 8-689] width (3) of port connection 'v_shift' does not match port width (2) of module 'matrix_operations' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:202]
 INFO: [Synth 8-6157] synthesizing module 'write_enable' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/write_enable.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'write_enable' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/write_enable.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'memory_manager' (0#1) [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-6014] Unused sequential element prev_buffer_pos_counter_reg was removed.  [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:294]
-WARNING: [Synth 8-6014] Unused sequential element upper_block_up_reg was removed.  [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:404]
-WARNING: [Synth 8-7129] Port sprite_in[127] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[126] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[125] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[124] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[123] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[122] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[121] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[120] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[119] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[118] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[117] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[116] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[115] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[114] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[113] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[112] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[111] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[110] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[109] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[108] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[107] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[106] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[105] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[104] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[103] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[102] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[101] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[100] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[99] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[98] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[97] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[96] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[95] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[94] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[93] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[92] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[91] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[90] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[89] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[88] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[87] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[86] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[85] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[84] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[83] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[82] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[81] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[80] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[79] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[78] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[77] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[76] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[75] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[74] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[73] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[72] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[71] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[70] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[69] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[68] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[67] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[66] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[65] in module write_enable is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sprite_in[64] in module write_enable is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element begining_of_copy_reg was removed.  [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:300]
+WARNING: [Synth 8-6014] Unused sequential element prev_buffer_pos_counter_reg was removed.  [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:308]
+WARNING: [Synth 8-6014] Unused sequential element previous_addr_read_reg was removed.  [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:323]
 WARNING: [Synth 8-7129] Port last_upper[103] in module matrix_operations is either unconnected or has no load
 WARNING: [Synth 8-7129] Port last_upper[102] in module matrix_operations is either unconnected or has no load
 WARNING: [Synth 8-7129] Port last_upper[101] in module matrix_operations is either unconnected or has no load
@@ -164,9 +99,73 @@ WARNING: [Synth 8-7129] Port last_upper[23] in module matrix_operations is eithe
 WARNING: [Synth 8-7129] Port last_upper[22] in module matrix_operations is either unconnected or has no load
 WARNING: [Synth 8-7129] Port last_upper[21] in module matrix_operations is either unconnected or has no load
 WARNING: [Synth 8-7129] Port last_upper[20] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[19] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[18] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[17] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[16] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[15] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[14] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[13] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[12] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[11] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[10] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[9] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[8] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[7] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[6] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[5] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[4] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[3] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[2] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[1] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_upper[0] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[103] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[102] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[101] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[100] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[99] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[98] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[97] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[96] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[71] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[70] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[69] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[68] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[67] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[66] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[65] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[64] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[39] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[38] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[37] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[36] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[35] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[34] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[33] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[32] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[7] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[6] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[5] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[4] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[3] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[2] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[1] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last[0] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[103] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[102] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[101] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[100] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[99] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[98] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[97] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[96] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[71] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[70] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[69] in module matrix_operations is either unconnected or has no load
+WARNING: [Synth 8-7129] Port upper[68] in module matrix_operations is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1323.059 ; gain = 506.863
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1323.387 ; gain = 508.426
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_PORTB_0_dout[127] with 1st driver pin 'VRAM/frame_buffer_i/blk_mem_gen_0/doutb[127]' [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/synth/frame_buffer.v:52]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_PORTB_0_dout[127] with 2nd driver pin 'BRAM_PORTB_0_dout[127]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
@@ -280,12 +279,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1323.059 ; gain = 506.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1323.387 ; gain = 508.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1323.059 ; gain = 506.863
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1323.387 ; gain = 508.426
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1323.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1323.387 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -296,29 +295,29 @@ Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/
 Finished Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/ip/frame_buffer_blk_mem_gen_0_0/frame_buffer_blk_mem_gen_0_0/frame_buffer_blk_mem_gen_0_0_in_context.xdc] for cell 'VRAM/frame_buffer_i/blk_mem_gen_0'
 Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0_in_context.xdc] for cell 'buffer_rams/buffer_rams_i/UPPER_PREVIOUS'
 Finished Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0_in_context.xdc] for cell 'buffer_rams/buffer_rams_i/UPPER_PREVIOUS'
-Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_0_in_context.xdc] for cell 'buffer_rams/buffer_rams_i/PREVIOUS'
-Finished Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_0_in_context.xdc] for cell 'buffer_rams/buffer_rams_i/PREVIOUS'
 Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_0_in_context.xdc] for cell 'buffer_rams/buffer_rams_i/UPPER'
 Finished Parsing XDC File [c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_0_in_context.xdc] for cell 'buffer_rams/buffer_rams_i/UPPER'
 Parsing XDC File [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1416.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1385.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1416.148 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1385.262 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -329,34 +328,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for VRAM/frame_buffer_i. (constraint 
 Applied set_property KEEP_HIERARCHY = SOFT for VRAM/frame_buffer_i/blk_mem_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buffer_rams/buffer_rams_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buffer_rams/buffer_rams_i/UPPER_PREVIOUS. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for buffer_rams/buffer_rams_i/PREVIOUS. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buffer_rams/buffer_rams_i/UPPER. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Preparing Guide Design
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1416.148 ; gain = 599.953
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1416.148 ; gain = 599.953
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.148 ; gain = 599.953
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -365,27 +343,29 @@ Detailed RTL Component Info :
 	   2 Input   15 Bit       Adders := 2     
 	   2 Input   14 Bit       Adders := 1     
 	   3 Input   10 Bit       Adders := 2     
-	   2 Input    9 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	              128 Bit    Registers := 1     
+	              128 Bit    Registers := 2     
 	               15 Bit    Registers := 1     
-	               14 Bit    Registers := 2     
-	                8 Bit    Registers := 5     
+	               14 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 7     
 +---Muxes : 
 	   4 Input  128 Bit        Muxes := 5     
 	   2 Input   15 Bit        Muxes := 4     
-	   3 Input   14 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 6     
+	   3 Input    9 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 4     
-	   2 Input    2 Bit        Muxes := 7     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 5     
 	   4 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 51    
-	   4 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 55    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -403,25 +383,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -439,138 +419,138 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[127] with 1st driver pin 'BRAM_PORTB_0_dout[127]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_0 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[127]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_0 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[127]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[126] with 1st driver pin 'BRAM_PORTB_0_dout[126]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_1 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[126]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_1 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[126]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[125] with 1st driver pin 'BRAM_PORTB_0_dout[125]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_2 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[125]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_2 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[125]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[124] with 1st driver pin 'BRAM_PORTB_0_dout[124]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_3 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[124]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_3 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[124]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[123] with 1st driver pin 'BRAM_PORTB_0_dout[123]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_4 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[123]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_4 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[123]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[122] with 1st driver pin 'BRAM_PORTB_0_dout[122]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_5 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[122]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_5 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[122]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[121] with 1st driver pin 'BRAM_PORTB_0_dout[121]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_6 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[121]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_6 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[121]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[120] with 1st driver pin 'BRAM_PORTB_0_dout[120]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_7 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[120]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_7 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[120]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[119] with 1st driver pin 'BRAM_PORTB_0_dout[119]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_8 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[119]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_8 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[119]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[118] with 1st driver pin 'BRAM_PORTB_0_dout[118]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_9 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[118]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_9 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[118]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[117] with 1st driver pin 'BRAM_PORTB_0_dout[117]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_10 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[117]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_10 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[117]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[116] with 1st driver pin 'BRAM_PORTB_0_dout[116]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_11 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[116]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_11 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[116]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[115] with 1st driver pin 'BRAM_PORTB_0_dout[115]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_12 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[115]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_12 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[115]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[114] with 1st driver pin 'BRAM_PORTB_0_dout[114]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_13 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[114]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_13 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[114]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[113] with 1st driver pin 'BRAM_PORTB_0_dout[113]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_14 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[113]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_14 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[113]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[112] with 1st driver pin 'BRAM_PORTB_0_dout[112]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_15 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[112]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_15 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[112]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[111] with 1st driver pin 'BRAM_PORTB_0_dout[111]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_16 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[111]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_16 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[111]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[110] with 1st driver pin 'BRAM_PORTB_0_dout[110]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_17 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[110]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_17 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[110]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[109] with 1st driver pin 'BRAM_PORTB_0_dout[109]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_18 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[109]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_18 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[109]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[108] with 1st driver pin 'BRAM_PORTB_0_dout[108]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_19 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[108]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_19 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[108]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[107] with 1st driver pin 'BRAM_PORTB_0_dout[107]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_20 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[107]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_20 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[107]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[106] with 1st driver pin 'BRAM_PORTB_0_dout[106]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_21 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[106]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_21 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[106]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[105] with 1st driver pin 'BRAM_PORTB_0_dout[105]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_22 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[105]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_22 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[105]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[104] with 1st driver pin 'BRAM_PORTB_0_dout[104]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_23 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[104]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_23 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[104]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[103] with 1st driver pin 'BRAM_PORTB_0_dout[103]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_24 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[103]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_24 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[103]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[102] with 1st driver pin 'BRAM_PORTB_0_dout[102]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_25 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[102]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_25 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[102]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[101] with 1st driver pin 'BRAM_PORTB_0_dout[101]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_26 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[101]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_26 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[101]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[100] with 1st driver pin 'BRAM_PORTB_0_dout[100]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_27 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[100]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_27 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[100]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[99] with 1st driver pin 'BRAM_PORTB_0_dout[99]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_28 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[99]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_28 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[99]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[98] with 1st driver pin 'BRAM_PORTB_0_dout[98]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_29 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[98]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_29 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[98]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[97] with 1st driver pin 'BRAM_PORTB_0_dout[97]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_30 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[97]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_30 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[97]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[96] with 1st driver pin 'BRAM_PORTB_0_dout[96]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_31 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[96]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_31 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[96]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[95] with 1st driver pin 'BRAM_PORTB_0_dout[95]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_32 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[95]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_32 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[95]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[94] with 1st driver pin 'BRAM_PORTB_0_dout[94]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_33 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[94]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_33 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[94]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[93] with 1st driver pin 'BRAM_PORTB_0_dout[93]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_34 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[93]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_34 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[93]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[92] with 1st driver pin 'BRAM_PORTB_0_dout[92]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_35 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[92]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_35 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[92]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[91] with 1st driver pin 'BRAM_PORTB_0_dout[91]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_36 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[91]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_36 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[91]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[90] with 1st driver pin 'BRAM_PORTB_0_dout[90]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_37 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[90]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_37 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[90]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[89] with 1st driver pin 'BRAM_PORTB_0_dout[89]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_38 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[89]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_38 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[89]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[88] with 1st driver pin 'BRAM_PORTB_0_dout[88]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_39 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[88]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_39 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[88]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[87] with 1st driver pin 'BRAM_PORTB_0_dout[87]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_40 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[87]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_40 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[87]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[86] with 1st driver pin 'BRAM_PORTB_0_dout[86]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_41 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[86]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_41 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[86]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[85] with 1st driver pin 'BRAM_PORTB_0_dout[85]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_42 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[85]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_42 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[85]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[84] with 1st driver pin 'BRAM_PORTB_0_dout[84]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_43 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[84]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_43 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[84]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[83] with 1st driver pin 'BRAM_PORTB_0_dout[83]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_44 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[83]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_44 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[83]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[82] with 1st driver pin 'BRAM_PORTB_0_dout[82]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_45 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[82]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_45 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[82]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[81] with 1st driver pin 'BRAM_PORTB_0_dout[81]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_46 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[81]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_46 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[81]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[80] with 1st driver pin 'BRAM_PORTB_0_dout[80]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_47 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[80]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_47 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[80]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[79] with 1st driver pin 'BRAM_PORTB_0_dout[79]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_48 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[79]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_48 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[79]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 WARNING: [Synth 8-5753] loadless multi-driven net BRAM_PORTB_0_dout[78] with 1st driver pin 'BRAM_PORTB_0_dout[78]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:23]
-WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_49 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[78]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:42]
+WARNING: [Synth 8-5753] loadless multi-driven net VRAM/frame_buffer_i_n_49 with 2nd driver pin 'VRAM/frame_buffer_i/BRAM_PORTB_0_dout[78]' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v:42]
 INFO: [Common 17-14] Message 'Synth 8-5753' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -582,53 +562,52 @@ Report BlackBoxes:
 +------+-----------------------------+----------+
 |1     |sprite_mem_blk_mem_gen_0_0   |         1|
 |2     |frame_buffer_blk_mem_gen_0_0 |         1|
-|3     |buffer_rams_blk_mem_gen_0_1  |         1|
-|4     |buffer_rams_blk_mem_gen_0_3  |         1|
-|5     |buffer_rams_blk_mem_gen_0_0  |         1|
+|3     |buffer_rams_blk_mem_gen_0_3  |         1|
+|4     |buffer_rams_blk_mem_gen_0_0  |         1|
 +------+-----------------------------+----------+
 
 Report Cell Usage: 
 +------+---------------------------+------+
 |      |Cell                       |Count |
 +------+---------------------------+------+
-|1     |buffer_rams_blk_mem_gen_0  |     3|
-|4     |frame_buffer_blk_mem_gen_0 |     1|
-|5     |sprite_mem_blk_mem_gen_0   |     1|
-|6     |BUFG                       |     1|
-|7     |CARRY4                     |    24|
-|8     |LUT1                       |     7|
-|9     |LUT2                       |    33|
-|10    |LUT3                       |    39|
-|11    |LUT4                       |    70|
-|12    |LUT5                       |   133|
-|13    |LUT6                       |   486|
-|14    |FDRE                       |   252|
-|15    |FDSE                       |     1|
-|16    |IBUF                       |   211|
-|17    |OBUF                       |     1|
+|1     |buffer_rams_blk_mem_gen_0  |     2|
+|3     |frame_buffer_blk_mem_gen_0 |     1|
+|4     |sprite_mem_blk_mem_gen_0   |     1|
+|5     |BUFG                       |     1|
+|6     |CARRY4                     |    22|
+|7     |LUT1                       |     7|
+|8     |LUT2                       |   169|
+|9     |LUT3                       |    55|
+|10    |LUT4                       |    53|
+|11    |LUT5                       |   281|
+|12    |LUT6                       |   495|
+|13    |FDRE                       |   339|
+|14    |FDSE                       |     6|
+|15    |IBUF                       |   211|
+|16    |OBUF                       |     1|
 +------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1385.262 ; gain = 570.301
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 398 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1416.148 ; gain = 506.863
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1416.148 ; gain = 599.953
+Synthesis finished with 0 errors, 0 critical warnings and 397 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 1385.262 ; gain = 508.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1385.262 ; gain = 570.301
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1416.148 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1390.566 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1416.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1394.270 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 6904e05d
+Synth Design complete, checksum: 77332b78
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 209 Warnings, 100 Critical Warnings and 0 Errors encountered.
+55 Infos, 207 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 1416.148 ; gain = 1006.410
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:43 . Memory (MB): peak = 1394.270 ; gain = 985.332
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/synth_1/memory_manager.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file memory_manager_utilization_synth.rpt -pb memory_manager_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 21 12:24:55 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 29 08:47:06 2022...

@@ -105,8 +105,8 @@ module test_memory(
             base_addr_frame_buffer<=32'b0;
             h_size=8'd2;
             v_size=8'd1;
-            h_shift<=3'd1;
-            v_shift<=3'd0;
+            h_shift<=3'd0;
+            v_shift<=3'd1;
             base_addr_sprite_buffer<=32'b0;
             start=1'b1;
             state<=state+1;

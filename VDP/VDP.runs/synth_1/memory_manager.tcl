@@ -104,7 +104,6 @@ set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/D
 
 add_files C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/bd/buffer_rams/buffer_rams.bd
 set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/buffer_rams_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/buffer_rams_blk_mem_gen_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/buffer_rams_blk_mem_gen_0_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/buffer_rams/buffer_rams_ooc.xdc]
 

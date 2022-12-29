@@ -4,11 +4,11 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 12 for port 'SPRITE_PORTA_0_addr' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:43]
-WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 512 for port 'SPRITE_PORTA_0_din' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:45]
-WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 12 for port 'SPRITE_PORTB_0_addr' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:48]
-WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 512 for port 'SPRITE_PORTB_0_dout' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:50]
-WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'h_shift' [C:/Users/PC/Documents/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:202]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 12 for port 'SPRITE_PORTA_0_addr' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:43]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 512 for port 'SPRITE_PORTA_0_din' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:45]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 12 for port 'SPRITE_PORTB_0_addr' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:48]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 512 for port 'SPRITE_PORTB_0_dout' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v:50]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'h_shift' [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/vdp.v:202]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

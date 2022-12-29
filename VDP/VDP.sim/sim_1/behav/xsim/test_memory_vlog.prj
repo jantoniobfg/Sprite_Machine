@@ -5,7 +5,6 @@ verilog xil_defaultlib  \
 "../../../../VDP.ip_user_files/bd/frame_buffer/ip/frame_buffer_blk_mem_gen_0_0/sim/frame_buffer_blk_mem_gen_0_0.v" \
 "../../../../VDP.ip_user_files/bd/frame_buffer/sim/frame_buffer.v" \
 "../../../../VDP.ip_user_files/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_0/sim/buffer_rams_blk_mem_gen_0_0.v" \
-"../../../../VDP.ip_user_files/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_1/sim/buffer_rams_blk_mem_gen_0_1.v" \
 "../../../../VDP.ip_user_files/bd/buffer_rams/ip/buffer_rams_blk_mem_gen_0_3/sim/buffer_rams_blk_mem_gen_0_3.v" \
 "../../../../VDP.ip_user_files/bd/buffer_rams/sim/buffer_rams.v" \
 "../../../../VDP.gen/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v" \
