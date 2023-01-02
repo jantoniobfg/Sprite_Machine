@@ -104,7 +104,7 @@ module test_memory(
             sprite_write<=1'b0;
             base_addr_frame_buffer<=32'b0;
             h_size=8'd2;
-            v_size=8'd1;
+            v_size=8'd2;
             h_shift<=3'd0;
             v_shift<=3'd1;
             base_addr_sprite_buffer<=32'b0;
