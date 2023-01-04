@@ -6,6 +6,7 @@ INFO: [VRFC 10-311] analyzing module buffer_rams_wrapper
 INFO: [VRFC 10-311] analyzing module frame_buffer
 INFO: [VRFC 10-311] analyzing module frame_buffer_blk_mem_gen_0_0
 INFO: [VRFC 10-311] analyzing module frame_buffer_wrapper
+INFO: [VRFC 10-311] analyzing module matrix_operations
 INFO: [VRFC 10-311] analyzing module memory_manager
 INFO: [VRFC 10-311] analyzing module sprite_mem
 INFO: [VRFC 10-311] analyzing module sprite_mem_blk_mem_gen_0_0
@@ -281,7 +282,7 @@ INFO: [VRFC 10-311] analyzing module sprite_mem_blk_mem_gen_0_0_blk_mem_gen_v8_4
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_memory
-WARNING: [VRFC 10-8497] literal value 'hFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:80]
-WARNING: [VRFC 10-8497] literal value 'hFFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000 truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:86]
-WARNING: [VRFC 10-8497] literal value 'h0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:92]
-WARNING: [VRFC 10-8497] literal value 'hFFFFFFFFFFFFFFFF_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_FFFFFFFF00000000_00000000FFFFFFFF truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:98]
+WARNING: [VRFC 10-8497] literal value 'hFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFF truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:99]
+WARNING: [VRFC 10-8497] literal value 'hFFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000 truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:105]
+WARNING: [VRFC 10-8497] literal value 'h0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF_0000000000000000_FFFFFFFFFFFFFFFF truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:111]
+WARNING: [VRFC 10-8497] literal value 'hFFFFFFFFFFFFFFFF_0000000000000000_0000000000000000_0000000000000000_0000000000000000_0000000000000000_FFFFFFFF00000000_00000000FFFFFFFF truncated to fit in 128 bits [C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sim_1/new/test_memory.v:117]

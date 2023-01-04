@@ -18,8 +18,13 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module matrix_operations(input [127:0] last_upper, input [127:0] last, input[127:0] upper, input [127:0] new, input[1:0] h_shift, input[1:0] v_shift, output reg [127:0] to_save);
+module matrix_operations(input [127:0] last_upper, input [127:0] last, input[127:0] upper, input [127:0] new, input[2:0] h_shifta, input[2:0] v_shifta, output reg [127:0] to_save);
 
+    wire[1:0] h_shift,v_shift;
+    
+    assign h_shift=h_shifta[1:0];
+    assign v_shift=v_shifta[1:0];
+    
     wire [31:0] last_upper_bytes [3:0];
     wire [31:0] last_bytes [3:0];
     wire [31:0] new_bytes [3:0];

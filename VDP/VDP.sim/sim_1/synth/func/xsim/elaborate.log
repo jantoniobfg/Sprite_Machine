@@ -9,8 +9,8 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
 Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.FDRE_default
 Compiling module unisims_ver.x_lut2_mux4
 Compiling module unisims_ver.LUT2
@@ -25,6 +25,7 @@ Compiling module unisims_ver.RAMB36E1(DOA_REG=1,DOB_REG=1,REA...
 Compiling module xil_defaultlib.sprite_mem_blk_mem_gen_0_0
 Compiling module xil_defaultlib.sprite_mem
 Compiling module xil_defaultlib.sprite_mem_wrapper
+Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.MUXF7
 Compiling module unisims_ver.RB36_INTERNAL_VLOG(DOA_REG=1,DOB...
 Compiling module unisims_ver.RAMB36E1(DOA_REG=1,DOB_REG=1,REA...
@@ -42,9 +43,9 @@ Compiling module xil_defaultlib.buffer_rams_blk_mem_gen_0_3
 Compiling module xil_defaultlib.buffer_rams_blk_mem_gen_0_0
 Compiling module xil_defaultlib.buffer_rams
 Compiling module xil_defaultlib.buffer_rams_wrapper
-Compiling module unisims_ver.OBUF
 Compiling module unisims_ver.FDSE_default
 Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.matrix_operations
 Compiling module unisims_ver.FDRE(IS_C_INVERTED=1'b1)
 Compiling module xil_defaultlib.memory_manager
 Compiling module xil_defaultlib.test_memory

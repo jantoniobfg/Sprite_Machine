@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+
 module test_memory(
 
     );
@@ -38,8 +39,9 @@ module test_memory(
     reg [14:0]BRAM_PORTB_0_addr;
     wire [127:0] BRAM_PORTB_0_dout;
     reg [2:0] h_shift, v_shift;
-    reg [7:0] state=0;
-    
+    integer state=-3;
+    reg reset;
+    wire reseting;
     initial begin
         start=0;
         base_addr_frame_buffer=13'd0;
@@ -53,10 +55,11 @@ module test_memory(
     
         h_shift=0;
         v_shift=0;
-        state=0;
+        state=-3;
+        reset=0;
     end
     
-    memory_manager mem (clk, start,  base_addr_frame_buffer, h_size,  v_size, base_addr_sprite_buffer,  h_shift,  v_shift, busy_in,
+    memory_manager mem (clk,reset,reseting, start,  base_addr_frame_buffer, h_size,  v_size, base_addr_sprite_buffer,  h_shift,  v_shift, busy_in,
                        sprite_in,  sprite_address, sprite_write,
                       BRAM_PORTB_0_addr, BRAM_PORTB_0_dout);
                       
@@ -64,7 +67,23 @@ module test_memory(
     
     
     always@ (posedge clk) begin
-        if(state==8'd0) begin
+        if(state==-3)begin
+            reset<=1'd1;
+            state<=state+1;
+        end
+        else if(state==-2)begin
+            if(reseting==1) begin
+                state<=state+1;
+            end
+            
+        end
+        else if(state==-1)begin
+            reset<=1'd0;
+            if(reseting==0) begin
+                state<=state+1;
+            end
+        end
+        else if(state==8'd0) begin
             sprite_in<=128'b0;
             sprite_address<=14'b0;
             sprite_write<=1'b1;
@@ -105,7 +124,7 @@ module test_memory(
             base_addr_frame_buffer<=32'b0;
             h_size=8'd2;
             v_size=8'd2;
-            h_shift<=3'd0;
+            h_shift<=3'd1;
             v_shift<=3'd1;
             base_addr_sprite_buffer<=32'b0;
             start=1'b1;

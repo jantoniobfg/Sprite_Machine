@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+Block Memory Generator module test_memory.mem.buffer_rams.buffer_rams_i.PREVIOUS.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_memory.mem.buffer_rams.buffer_rams_i.UPPER.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_memory.mem.buffer_rams.buffer_rams_i.UPPER_PREVIOUS.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_memory.mem.VRAM.frame_buffer_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_memory.mem.SPRAM.sprite_mem_i.sprite_mem.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_5 collision detected at time: 25000, Instance: test_memory.mem.buffer_rams.buffer_rams_i.UPPER_PREVIOUS.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 25000, Instance: test_memory.mem.VRAM.frame_buffer_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 35000, Instance: test_memory.mem.buffer_rams.buffer_rams_i.UPPER.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A write address: 1, B  read address: 1
