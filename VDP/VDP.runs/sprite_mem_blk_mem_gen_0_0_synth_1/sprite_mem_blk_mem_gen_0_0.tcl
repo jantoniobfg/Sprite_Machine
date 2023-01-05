@@ -70,7 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "sprite_mem_blk_mem_gen_0_0_synth_1" START { ROLLUP_AUTO }
-set_param general.maxThreads 12
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache C:/Users/jabilio.000/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-44768-DELL-DIR/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }

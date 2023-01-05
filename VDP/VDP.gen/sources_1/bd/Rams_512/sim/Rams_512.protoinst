@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Rams_512": {
+			"proto_instances": {
+			}
+		}
+	}
+}

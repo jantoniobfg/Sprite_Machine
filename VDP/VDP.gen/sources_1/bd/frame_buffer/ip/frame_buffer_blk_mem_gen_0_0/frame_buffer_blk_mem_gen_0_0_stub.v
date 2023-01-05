@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Tue Dec 20 14:59:39 2022
+// Date        : Wed Dec 21 12:06:26 2022
 // Host        : DELL-DIR running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top frame_buffer_blk_mem_gen_0_0 -prefix
-//               frame_buffer_blk_mem_gen_0_0_ frame_buffer_blk_mem_gen_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/frame_buffer/ip/frame_buffer_blk_mem_gen_0_0/frame_buffer_blk_mem_gen_0_0_stub.v
 // Design      : frame_buffer_blk_mem_gen_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

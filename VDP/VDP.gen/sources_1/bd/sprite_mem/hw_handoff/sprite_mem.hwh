@@ -1,50 +1,50 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 20 14:57:40 2022" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan  4 10:43:30 2023" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="sprite_mem" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" LEFT="13" NAME="SPRITE_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
+    <PORT DIR="I" LEFT="13" NAME="BRAM_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="addra"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="SPRITE_PORTA_0_clk" SIGIS="undef" SIGNAME="sprite_mem_clka">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="BRAM_PORTA_0_clk" SIGIS="clk" SIGNAME="sprite_mem_clka">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="clka"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="127" NAME="SPRITE_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
+    <PORT DIR="I" LEFT="127" NAME="BRAM_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="dina"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="SPRITE_PORTA_0_en" SIGIS="undef" SIGNAME="sprite_mem_ena">
+    <PORT DIR="I" NAME="BRAM_PORTA_0_en" SIGIS="undef" SIGNAME="sprite_mem_ena">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="ena"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="0" NAME="SPRITE_PORTA_0_we" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_wea">
+    <PORT DIR="I" LEFT="0" NAME="BRAM_PORTA_0_we" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_wea">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="wea"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="13" NAME="SPRITE_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
+    <PORT DIR="I" LEFT="13" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="addrb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="SPRITE_PORTB_0_clk" SIGIS="undef" SIGNAME="sprite_mem_clkb">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="clk" SIGNAME="sprite_mem_clkb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="clkb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="127" NAME="SPRITE_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
+    <PORT DIR="O" LEFT="127" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="doutb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="SPRITE_PORTB_0_en" SIGIS="undef" SIGNAME="sprite_mem_enb">
+    <PORT DIR="I" NAME="BRAM_PORTB_0_en" SIGIS="undef" SIGNAME="sprite_mem_enb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sprite_mem" PORT="enb"/>
       </CONNECTIONS>
@@ -52,33 +52,33 @@
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
-    <BUSINTERFACE BUSNAME="External_Interface_SPRITE_PORTA_0" NAME="SPRITE_PORTA_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTA_0" NAME="BRAM_PORTA_0" TYPE="TARGET">
       <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
       <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
       <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
       <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
-      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="WRITE_ONLY"/>
       <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
       <PORTMAPS>
-        <PORTMAP LOGICAL="ADDR" PHYSICAL="SPRITE_PORTA_0_addr"/>
-        <PORTMAP LOGICAL="CLK" PHYSICAL="SPRITE_PORTA_0_clk"/>
-        <PORTMAP LOGICAL="DIN" PHYSICAL="SPRITE_PORTA_0_din"/>
-        <PORTMAP LOGICAL="EN" PHYSICAL="SPRITE_PORTA_0_en"/>
-        <PORTMAP LOGICAL="WE" PHYSICAL="SPRITE_PORTA_0_we"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTA_0_addr"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTA_0_clk"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTA_0_din"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTA_0_en"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTA_0_we"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_SPRITE_PORTB_0" NAME="SPRITE_PORTB_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0" NAME="BRAM_PORTB_0" TYPE="TARGET">
       <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
       <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
       <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
       <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
-      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
       <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
       <PORTMAPS>
-        <PORTMAP LOGICAL="ADDR" PHYSICAL="SPRITE_PORTB_0_addr"/>
-        <PORTMAP LOGICAL="CLK" PHYSICAL="SPRITE_PORTB_0_clk"/>
-        <PORTMAP LOGICAL="DOUT" PHYSICAL="SPRITE_PORTB_0_dout"/>
-        <PORTMAP LOGICAL="EN" PHYSICAL="SPRITE_PORTB_0_en"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_addr"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_clk"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_dout"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_en"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -241,52 +241,52 @@
       <PORTS>
         <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="sprite_mem_clka">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_clk"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTA_0_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="sprite_mem_ena">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_en"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTA_0_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_wea">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_we"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTA_0_we"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="13" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addra">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_addr"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTA_0_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="127" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_dina">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTA_0_din"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTA_0_din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="sprite_mem_clkb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_clk"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTB_0_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="sprite_mem_enb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_en"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTB_0_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="13" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_addrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_addr"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTB_0_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="sprite_mem_doutb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sprite_mem_imp" PORT="SPRITE_PORTB_0_dout"/>
+            <CONNECTION INSTANCE="sprite_mem_imp" PORT="BRAM_PORTB_0_dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="External_Interface_SPRITE_PORTA_0" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTA_0" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -301,7 +301,7 @@
             <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="External_Interface_SPRITE_PORTB_0" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>

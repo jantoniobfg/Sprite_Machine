@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9596F10A385EE506",
+      "boundary_crc": "0xA96C4029BE6C2874",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../VDP.gen/sources_1/bd/sprite_mem",
       "name": "sprite_mem",
@@ -14,7 +14,7 @@
       "sprite_mem": ""
     },
     "interface_ports": {
-      "SPRITE_PORTA_0": {
+      "BRAM_PORTA_0": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
         "vlnv": "xilinx.com:interface:bram_rtl:1.0",
@@ -38,38 +38,41 @@
           "READ_LATENCY": {
             "value": "1",
             "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "WRITE_ONLY"
           }
         },
         "port_maps": {
           "ADDR": {
-            "physical_name": "SPRITE_PORTA_0_addr",
+            "physical_name": "BRAM_PORTA_0_addr",
             "direction": "I",
             "left": "13",
             "right": "0"
           },
           "CLK": {
-            "physical_name": "SPRITE_PORTA_0_clk",
+            "physical_name": "BRAM_PORTA_0_clk",
             "direction": "I"
           },
           "DIN": {
-            "physical_name": "SPRITE_PORTA_0_din",
+            "physical_name": "BRAM_PORTA_0_din",
             "direction": "I",
             "left": "127",
             "right": "0"
           },
           "EN": {
-            "physical_name": "SPRITE_PORTA_0_en",
+            "physical_name": "BRAM_PORTA_0_en",
             "direction": "I"
           },
           "WE": {
-            "physical_name": "SPRITE_PORTA_0_we",
+            "physical_name": "BRAM_PORTA_0_we",
             "direction": "I",
             "left": "0",
             "right": "0"
           }
         }
       },
-      "SPRITE_PORTB_0": {
+      "BRAM_PORTB_0": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
         "vlnv": "xilinx.com:interface:bram_rtl:1.0",
@@ -93,27 +96,30 @@
           "READ_LATENCY": {
             "value": "1",
             "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_ONLY"
           }
         },
         "port_maps": {
           "ADDR": {
-            "physical_name": "SPRITE_PORTB_0_addr",
+            "physical_name": "BRAM_PORTB_0_addr",
             "direction": "I",
             "left": "13",
             "right": "0"
           },
           "CLK": {
-            "physical_name": "SPRITE_PORTB_0_clk",
+            "physical_name": "BRAM_PORTB_0_clk",
             "direction": "I"
           },
           "DOUT": {
-            "physical_name": "SPRITE_PORTB_0_dout",
+            "physical_name": "BRAM_PORTB_0_dout",
             "direction": "O",
             "left": "127",
             "right": "0"
           },
           "EN": {
-            "physical_name": "SPRITE_PORTB_0_en",
+            "physical_name": "BRAM_PORTB_0_en",
             "direction": "I"
           }
         }
@@ -128,6 +134,9 @@
         "parameters": {
           "Memory_Type": {
             "value": "Simple_Dual_Port_RAM"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
           },
           "Write_Depth_A": {
             "value": "12288"
@@ -144,13 +153,13 @@
     "interface_nets": {
       "BRAM_PORTA_0_1": {
         "interface_ports": [
-          "SPRITE_PORTA_0",
+          "BRAM_PORTA_0",
           "sprite_mem/BRAM_PORTA"
         ]
       },
       "BRAM_PORTB_0_1": {
         "interface_ports": [
-          "SPRITE_PORTB_0",
+          "BRAM_PORTB_0",
           "sprite_mem/BRAM_PORTB"
         ]
       }

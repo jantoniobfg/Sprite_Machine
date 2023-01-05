@@ -1,0 +1,3 @@
+sprite_mem_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/sprite_mem/ip/sprite_mem_blk_mem_gen_0_0/sim/sprite_mem_blk_mem_gen_0_0.v,
+sprite_mem.v,verilog,xil_defaultlib,../../../bd/sprite_mem/sim/sprite_mem.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

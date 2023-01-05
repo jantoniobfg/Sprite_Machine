@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"test_memory_time_synth.v" \
+"../../../../../VDP.srcs/sim_1/new/test_memory.v" \
+
+# Do not sort compile order
+nosort

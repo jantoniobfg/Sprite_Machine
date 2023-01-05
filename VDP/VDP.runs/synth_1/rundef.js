@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log memory_manager.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_manager.tcl" );
+         "-log memory_manager_512.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_manager_512.tcl" );
 
 
 
