@@ -1,0 +1,582 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x29D27F915E3BA35A",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../VDP.gen/sources_1/bd/Rams_512",
+      "name": "Rams_512",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "FRAME_512_mem_gen_0": "",
+      "SPRITE_512_mem_gen_0": "",
+      "UPPER_PREVIOUS_512_mem_gen_0": "",
+      "UPPER_512_mem_gen_1": ""
+    },
+    "interface_ports": {
+      "FRAME_512_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "FRAME_512_PORTA_0_addr",
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "FRAME_512_PORTA_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "FRAME_512_PORTA_0_din",
+            "direction": "I",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "FRAME_512_PORTA_0_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "FRAME_512_PORTA_0_we",
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          }
+        }
+      },
+      "FRAME_512_PORTB_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "FRAME_512_PORTB_0_addr",
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "FRAME_512_PORTB_0_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "FRAME_512_PORTB_0_dout",
+            "direction": "O",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "FRAME_512_PORTB_0_en",
+            "direction": "I"
+          }
+        }
+      },
+      "SPRITE_512_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "SPRITE_512_PORTA_0_addr",
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "SPRITE_512_PORTA_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "SPRITE_512_PORTA_0_din",
+            "direction": "I",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "SPRITE_512_PORTA_0_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "SPRITE_512_PORTA_0_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "SPRITE_512_PORTB_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "SPRITE_512_PORTB_0_addr",
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "SPRITE_512_PORTB_0_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "SPRITE_512_PORTB_0_dout",
+            "direction": "O",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "SPRITE_512_PORTB_0_en",
+            "direction": "I"
+          }
+        }
+      },
+      "UPPER_PREVIOUS_512_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTA_0_addr",
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTA_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTA_0_din",
+            "direction": "I",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTA_0_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTA_0_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "UPPER_PREVIOUS_512_PORTB_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTB_0_addr",
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTB_0_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTB_0_dout",
+            "direction": "O",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_PREVIOUS_512_PORTB_0_en",
+            "direction": "I"
+          }
+        }
+      },
+      "UPPER_512_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_512_PORTA_0_addr",
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_512_PORTA_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "UPPER_512_PORTA_0_din",
+            "direction": "I",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_512_PORTA_0_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "UPPER_512_PORTA_0_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "UPPER_512_PORTB_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "UPPER_512_PORTB_0_addr",
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "UPPER_512_PORTB_0_clk",
+            "direction": "I"
+          },
+          "DOUT": {
+            "physical_name": "UPPER_512_PORTB_0_dout",
+            "direction": "O",
+            "left": "511",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "UPPER_512_PORTB_0_en",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "components": {
+      "FRAME_512_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Rams_512_blk_mem_gen_0_0",
+        "xci_path": "ip\\Rams_512_blk_mem_gen_0_0\\Rams_512_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "FRAME_512_mem_gen_0",
+        "parameters": {
+          "Algorithm": {
+            "value": "Minimum_Area"
+          },
+          "Byte_Size": {
+            "value": "8"
+          },
+          "Enable_A": {
+            "value": "Use_ENA_Pin"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "4800"
+          },
+          "Write_Width_A": {
+            "value": "512"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "SPRITE_512_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Rams_512_blk_mem_gen_0_1",
+        "xci_path": "ip\\Rams_512_blk_mem_gen_0_1\\Rams_512_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "SPRITE_512_mem_gen_0",
+        "parameters": {
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "4000"
+          },
+          "Write_Width_A": {
+            "value": "512"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "UPPER_PREVIOUS_512_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Rams_512_blk_mem_gen_0_2",
+        "xci_path": "ip\\Rams_512_blk_mem_gen_0_2\\Rams_512_blk_mem_gen_0_2.xci",
+        "inst_hier_path": "UPPER_PREVIOUS_512_mem_gen_0",
+        "parameters": {
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "160"
+          },
+          "Write_Width_A": {
+            "value": "512"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "UPPER_512_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0",
+        "xci_path": "ip\\Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0\\Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0.xci",
+        "inst_hier_path": "UPPER_512_mem_gen_1",
+        "parameters": {
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "160"
+          },
+          "Write_Width_A": {
+            "value": "512"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTA_0_1": {
+        "interface_ports": [
+          "FRAME_512_PORTA_0",
+          "FRAME_512_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTA_0_2": {
+        "interface_ports": [
+          "SPRITE_512_PORTA_0",
+          "SPRITE_512_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTA_0_3": {
+        "interface_ports": [
+          "UPPER_PREVIOUS_512_PORTA_0",
+          "UPPER_PREVIOUS_512_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTA_0_4": {
+        "interface_ports": [
+          "UPPER_512_PORTA_0",
+          "UPPER_512_mem_gen_1/BRAM_PORTA"
+        ]
+      },
+      "BRAM_PORTB_0_1": {
+        "interface_ports": [
+          "FRAME_512_PORTB_0",
+          "FRAME_512_mem_gen_0/BRAM_PORTB"
+        ]
+      },
+      "BRAM_PORTB_0_2": {
+        "interface_ports": [
+          "SPRITE_512_PORTB_0",
+          "SPRITE_512_mem_gen_0/BRAM_PORTB"
+        ]
+      },
+      "BRAM_PORTB_0_3": {
+        "interface_ports": [
+          "UPPER_PREVIOUS_512_PORTB_0",
+          "UPPER_PREVIOUS_512_mem_gen_0/BRAM_PORTB"
+        ]
+      },
+      "BRAM_PORTB_0_4": {
+        "interface_ports": [
+          "UPPER_512_PORTB_0",
+          "UPPER_512_mem_gen_1/BRAM_PORTB"
+        ]
+      }
+    }
+  }
+}
