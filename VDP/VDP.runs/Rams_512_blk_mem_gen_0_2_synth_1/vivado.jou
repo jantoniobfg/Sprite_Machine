@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jan  4 16:22:56 2023
+# Process ID: 26264
+# Current directory: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1
+# Command line: vivado.exe -log Rams_512_blk_mem_gen_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rams_512_blk_mem_gen_0_2.tcl
+# Log file: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2.vds
+# Journal file: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1\vivado.jou
+# Running On: DELL-DIR, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 16893 MB
+#-----------------------------------------------------------
+source Rams_512_blk_mem_gen_0_2.tcl -notrace

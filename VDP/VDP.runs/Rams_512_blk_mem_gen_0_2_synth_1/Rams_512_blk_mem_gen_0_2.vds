@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jan  4 16:22:56 2023
+# Process ID: 26264
+# Current directory: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1
+# Command line: vivado.exe -log Rams_512_blk_mem_gen_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rams_512_blk_mem_gen_0_2.tcl
+# Log file: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2.vds
+# Journal file: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1\vivado.jou
+# Running On: DELL-DIR, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 16893 MB
+#-----------------------------------------------------------
+source Rams_512_blk_mem_gen_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 374.074 ; gain = 51.176
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: Rams_512_blk_mem_gen_0_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 075d62e04c0faa48 to dir: C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.cache/ip/2022.2/0/7/075d62e04c0faa48/Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0.dcp to C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.cache/ip/2022.2/0/7/075d62e04c0faa48/Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0_sim_netlist.v to C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.cache/ip/2022.2/0/7/075d62e04c0faa48/Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0_sim_netlist.vhdl to C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.cache/ip/2022.2/0/7/075d62e04c0faa48/Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0_stub.v to C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.cache/ip/2022.2/0/7/075d62e04c0faa48/Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0_stub.vhdl to C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.runs/Rams_512_blk_mem_gen_0_2_synth_1/Rams_512_blk_mem_gen_0_2_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP Rams_512_blk_mem_gen_0_2, cache-ID = 075d62e04c0faa48.
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  4 16:23:09 2023...

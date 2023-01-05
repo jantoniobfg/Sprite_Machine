@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log memory_manager.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_manager.tcl
+EAStep vivado -log memory_manager_512.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_manager_512.tcl

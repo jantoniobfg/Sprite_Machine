@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1672830722" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vdp.dcp">
-  <File Type="PA-TCL" Name="memory_manager.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="memory_manager_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="memory_manager_reports.tcl"/>
-  <File Type="RDS-RDS" Name="memory_manager.vds"/>
-  <File Type="RDS-UTIL" Name="memory_manager_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="memory_manager_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="memory_manager.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="memory_manager_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="memory_manager_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1672911942" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vdp.dcp">
+  <File Type="PA-TCL" Name="memory_manager_512.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="memory_manager_512_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="memory_manager_512_reports.tcl"/>
+  <File Type="RDS-RDS" Name="memory_manager_512.vds"/>
+  <File Type="RDS-UTIL" Name="memory_manager_512_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="memory_manager_512_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="memory_manager_512.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memory_manager_512_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="memory_manager_512_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/Rams_512/Rams_512.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/Rams_512/hdl/Rams_512_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/m_op_512.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/we_512.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/memory_manager_512.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/sprite_mem/sprite_mem.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,6 +56,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/frame_buffer/frame_buffer.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -27,6 +64,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/buffer_rams/buffer_rams.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,6 +72,7 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/buffer_rams/hdl/buffer_rams_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,6 +80,7 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/frame_buffer/hdl/frame_buffer_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -48,6 +88,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/matrix_operations.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -55,6 +96,7 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/sprite_mem/hdl/sprite_mem_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -62,6 +104,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/write_enable.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -69,6 +112,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/vdp.v">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -76,7 +120,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="memory_manager"/>
+      <Option Name="TopModule" Val="memory_manager_512"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -105,7 +149,11 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="frame_buffer_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Rams_512_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Rams_512_UPPER_PREVIOUS_512_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buffer_rams_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buffer_rams_blk_mem_gen_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="sprite_mem_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Rams_512_blk_mem_gen_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Rams_512_blk_mem_gen_0_2"/>
 </GenRun>
