@@ -41,7 +41,7 @@ module memory_manager_512(input clk,input reset, output resetin,  input start, i
     wire [0:0]UPPER_PREVIOUS_PORTA_0_we;
     wire [7:0]UPPER_PREVIOUS_PORTB_0_addr;
     wire UPPER_PREVIOUS_PORTB_0_clk;
-    wire [127:0]UPPER_PREVIOUS_PORTB_0_dout;
+    wire [511:0]UPPER_PREVIOUS_PORTB_0_dout;
     reg UPPER_PREVIOUS_PORTB_0_en;
     
   
@@ -221,7 +221,7 @@ module memory_manager_512(input clk,input reset, output resetin,  input start, i
         SPRITE_PORTA_0_en<=1'b1;
         SPRITE_PORTB_0_en<=1'b1;
         
-        SPRITE_PORTA_0_addr<=14'b0;
+        SPRITE_PORTA_0_addr<=13'b0;
         SPRITE_PORTA_0_din<=512'b0;
         SPRITE_PORTA_0_we<=1'b0;
 

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x29D27F915E3BA35A",
+      "boundary_crc": "0x29D27F9138C1FC49",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../VDP.gen/sources_1/bd/Rams_512",
       "name": "Rams_512",
@@ -477,7 +477,7 @@
             "value": "Simple_Dual_Port_RAM"
           },
           "Write_Depth_A": {
-            "value": "4000"
+            "value": "3072"
           },
           "Write_Width_A": {
             "value": "512"

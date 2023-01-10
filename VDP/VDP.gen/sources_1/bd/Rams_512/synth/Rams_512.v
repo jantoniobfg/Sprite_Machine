@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Wed Jan  4 16:21:26 2023
+//Date        : Tue Jan 10 13:34:44 2023
 //Host        : DELL-DIR running 64-bit major release  (build 9200)
 //Command     : generate_target Rams_512.bd
 //Design      : Rams_512
@@ -47,42 +47,42 @@ module Rams_512
     UPPER_PREVIOUS_512_PORTB_0_clk,
     UPPER_PREVIOUS_512_PORTB_0_dout,
     UPPER_PREVIOUS_512_PORTB_0_en);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FRAME_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [12:0]FRAME_512_PORTA_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 " *) input FRAME_512_PORTA_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 " *) input [511:0]FRAME_512_PORTA_0_din;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 " *) input FRAME_512_PORTA_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 " *) input [63:0]FRAME_512_PORTA_0_we;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FRAME_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [12:0]FRAME_512_PORTB_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 " *) input FRAME_512_PORTB_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 " *) output [511:0]FRAME_512_PORTB_0_dout;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 " *) input FRAME_512_PORTB_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [11:0]SPRITE_512_PORTA_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 " *) input SPRITE_512_PORTA_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 " *) input [511:0]SPRITE_512_PORTA_0_din;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 " *) input SPRITE_512_PORTA_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 " *) input [0:0]SPRITE_512_PORTA_0_we;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [11:0]SPRITE_512_PORTB_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 " *) input SPRITE_512_PORTB_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 " *) output [511:0]SPRITE_512_PORTB_0_dout;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 " *) input SPRITE_512_PORTB_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_512_PORTA_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 " *) input UPPER_512_PORTA_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 " *) input [511:0]UPPER_512_PORTA_0_din;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 " *) input UPPER_512_PORTA_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 " *) input [0:0]UPPER_512_PORTA_0_we;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_512_PORTB_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 " *) input UPPER_512_PORTB_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 " *) output [511:0]UPPER_512_PORTB_0_dout;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 " *) input UPPER_512_PORTB_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_PREVIOUS_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_PREVIOUS_512_PORTA_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 " *) input UPPER_PREVIOUS_512_PORTA_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 " *) input [511:0]UPPER_PREVIOUS_512_PORTA_0_din;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 " *) input UPPER_PREVIOUS_512_PORTA_0_en;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 " *) input [0:0]UPPER_PREVIOUS_512_PORTA_0_we;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_PREVIOUS_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_PREVIOUS_512_PORTB_0_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 " *) input UPPER_PREVIOUS_512_PORTB_0_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 " *) output [511:0]UPPER_PREVIOUS_512_PORTB_0_dout;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 " *) input UPPER_PREVIOUS_512_PORTB_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FRAME_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [12:0]FRAME_512_PORTA_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 CLK" *) input FRAME_512_PORTA_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 DIN" *) input [511:0]FRAME_512_PORTA_0_din;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 EN" *) input FRAME_512_PORTA_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTA_0 WE" *) input [63:0]FRAME_512_PORTA_0_we;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FRAME_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [12:0]FRAME_512_PORTB_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 CLK" *) input FRAME_512_PORTB_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 DOUT" *) output [511:0]FRAME_512_PORTB_0_dout;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 FRAME_512_PORTB_0 EN" *) input FRAME_512_PORTB_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [11:0]SPRITE_512_PORTA_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 CLK" *) input SPRITE_512_PORTA_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 DIN" *) input [511:0]SPRITE_512_PORTA_0_din;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 EN" *) input SPRITE_512_PORTA_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTA_0 WE" *) input [0:0]SPRITE_512_PORTA_0_we;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SPRITE_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [11:0]SPRITE_512_PORTB_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 CLK" *) input SPRITE_512_PORTB_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 DOUT" *) output [511:0]SPRITE_512_PORTB_0_dout;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 SPRITE_512_PORTB_0 EN" *) input SPRITE_512_PORTB_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_512_PORTA_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 CLK" *) input UPPER_512_PORTA_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 DIN" *) input [511:0]UPPER_512_PORTA_0_din;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 EN" *) input UPPER_512_PORTA_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTA_0 WE" *) input [0:0]UPPER_512_PORTA_0_we;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_512_PORTB_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 CLK" *) input UPPER_512_PORTB_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 DOUT" *) output [511:0]UPPER_512_PORTB_0_dout;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_512_PORTB_0 EN" *) input UPPER_512_PORTB_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_PREVIOUS_512_PORTA_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_PREVIOUS_512_PORTA_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 CLK" *) input UPPER_PREVIOUS_512_PORTA_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 DIN" *) input [511:0]UPPER_PREVIOUS_512_PORTA_0_din;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 EN" *) input UPPER_PREVIOUS_512_PORTA_0_en;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTA_0 WE" *) input [0:0]UPPER_PREVIOUS_512_PORTA_0_we;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME UPPER_PREVIOUS_512_PORTB_0, MASTER_TYPE OTHER, MEM_ECC NONE, MEM_SIZE 8192, MEM_WIDTH 32, READ_LATENCY 1" *) input [7:0]UPPER_PREVIOUS_512_PORTB_0_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 CLK" *) input UPPER_PREVIOUS_512_PORTB_0_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 DOUT" *) output [511:0]UPPER_PREVIOUS_512_PORTB_0_dout;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 UPPER_PREVIOUS_512_PORTB_0 EN" *) input UPPER_PREVIOUS_512_PORTB_0_en;
 
   wire [12:0]BRAM_PORTA_0_1_ADDR;
   wire BRAM_PORTA_0_1_CLK;

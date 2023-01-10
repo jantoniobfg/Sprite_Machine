@@ -81,7 +81,7 @@ module matrix_operations_512(input [511:0] last_upper, input [511:0] last, input
     wire [511:0] h0_v6;
     assign h0_v6={new_bytes[1],new_bytes[0],upper_bytes [7],upper_bytes [6],upper_bytes [5],upper_bytes [4],upper_bytes [3],upper_bytes [2]};
     wire [511:0] h0_v7;
-    assign h0_v7={new_bytes[0],upper_bytes [7],upper_bytes [6],upper_bytes [5],upper_bytes [4],upper_bytes [3],upper[2],upper[1]};
+    assign h0_v7={new_bytes[0],upper_bytes [7],upper_bytes [6],upper_bytes [5],upper_bytes [4],upper_bytes [3],upper_bytes[2],upper_bytes[1]};
     
     wire [511:0] h1_v0;
     assign h1_v0={new_bytes[7][63:8],last_bytes[7][63:56],new_bytes[6][63:8],last_bytes[6][63:56],new_bytes[5][63:8],last_bytes[5][63:56],new_bytes[4][63:8],last_bytes[4][63:56],new_bytes[3][63:8],last_bytes[3][63:56],new_bytes[2][63:8],last_bytes[2][63:56],new_bytes[1][63:8],last_bytes[1][63:56],new_bytes[0][63:8],last_bytes[0][63:56]};

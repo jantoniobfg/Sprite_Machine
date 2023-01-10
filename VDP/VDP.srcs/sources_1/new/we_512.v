@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module write_enable_512( input [513:0] sprite_in, output [63:0] we);
+module write_enable_512( input [511:0] sprite_in, output [63:0] we);
     assign we[0]=sprite_in[0]|sprite_in[1]|sprite_in[2]|sprite_in[3]|sprite_in[4]|sprite_in[5]|sprite_in[6]|sprite_in[7];
     assign we[1]=sprite_in[8]|sprite_in[9]|sprite_in[10]|sprite_in[11]|sprite_in[12]|sprite_in[13]|sprite_in[14]|sprite_in[15];
     assign we[2]=sprite_in[16]|sprite_in[17]|sprite_in[18]|sprite_in[19]|sprite_in[20]|sprite_in[21]|sprite_in[22]|sprite_in[23];

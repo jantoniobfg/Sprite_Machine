@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache C:/Users/jabilio.000/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-51976-DELL-DIR/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +91,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  c:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/Rams_512/hdl/Rams_512_wrapper.v
+  C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.gen/sources_1/bd/Rams_512/hdl/Rams_512_wrapper.v
   C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/m_op_512.v
   C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/we_512.v
   C:/Users/jabilio.000/Documents/git/Sprite_Machine/VDP/VDP.srcs/sources_1/new/memory_manager_512.v
